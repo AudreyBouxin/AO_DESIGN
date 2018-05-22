@@ -1,0 +1,366 @@
+\documentclass[12pt,a4paper]{article}
+
+\input{def/options}
+
+\begin{document}
+\input{def/pagetitle}
+\setlength{\parindent}{0pt}%20pt}
+
+%\tableofcontents
+
+\section*{Acronyms}
+\afterpage{\cfoot{\thepage}}
+
+\begin{minipage}[c]{0.5\textwidth}
+\begin{center}
+\begin{tabular}{p{13mm}|p{55mm}}
+aO & active Optics \\
+AO & Adaptive Optics \\
+CCD & Charge Coupled Device\\
+CMOS & Complementary Metal Oxide Semiconductor\\
+DAG & Dogu Anadolu Gozlemevi (East Anatolian Observatory)\\
+DM & Deformable Mirror\\
+FoV & Field-of-View\\
+FWHM & Full Width at Half Maximum\\
+NCPA & Non Common Path Aberrations
+\end{tabular}
+\end{center}
+\end{minipage}
+\begin{minipage}[c]{0.5\textwidth}
+\begin{center}
+\begin{tabular}{p{16mm}|p{55mm}}
+NGS & Natural Guide Star \\
+OTF & Optical Transfer Function\\
+P2V & Peak-to-Valley\\
+PSF & Point Spread Function\\
+PSF-R & PSF Reconstruction\\
+PWFS & Pyramid WFS\\
+RMS & Root Mean Square\\
+SH-WFS & Shack-Hartmann WFS\\
+SNR & Signal-to-Noise Ratio\\
+TT & Tip-Tilt\\
+WFS & Wavefront Sensor\\
+WFE & Wavefront Error
+\end{tabular}
+\end{center}
+\end{minipage}
+\newpage
+
+\section{Scope of this document}
+
+This document presents the DAG adaptive optics (AO) optical train design and optimization.
+
+\section{Introduction}
+There are several mandatory points we have to handle :
+\begin{itemize}
+	\item the exit pupil has to be imaged on the DM;
+	\item the DM diameter is fixed to the DM-468 from ALPAO; that means \diameter $33$ mm;
+	\item the exits pupil has to be imaged on the TT mirror for the P-WFS modulation;
+	\item the beam has to converge on the pyramid apex;
+	\item the angle of the beam that arrives onto the pyramid apex is calculated in order to get a diffraction limited PSF size of 2 times the pyramid roof;
+	\item the exit pupil has to be imaged onto the EMCCD detector
+	\item the beam footprint diameter onto the detector has to be defined accordingly to the oversampling criterion (explained section~\ref{subsec:4eme_partie}).
+\end{itemize}
+
+We use off axis parabolas (OAPs) for all our design to reduce the aberrations (compared to lenses).
+We have added one more constraint on the design which is to have parallel beam arriving or leaving each off axis parabola in order to limit the spherical aberrations.\\
+
+The fixed parameters are resumed here :
+\begin{itemize}
+	\item exit pupil diameter : \diameter$_{\text{ExtP}} = 727.4046$ mm;
+	\item distance exit pupil to focal plane : $\overline{\text{ExP-FP}} = 10338.74$ mm; 
+	\item DM diameter : \diameter$_{\text{DM}} = 33.0$ mm;
+	\item pixel size of the Nuvuu EMCCD AO : $\text{PxSize} = 24$ $\mu$m
+\end{itemize}
+\newpage
+In order to design the AO bench we started with the telescope model. Indeed, we would try to compensate for the field of curvature introduced by the mirrors of the telescope with the off-axis parabolas (OAP) of the AO. The Zemax model of the telescope shows a curvature radius of about 1255 mm.
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=\textwidth]{images/Zemax_model_telescope.PNG}
+		\caption{Zemax model of the telescope}\label{fig:Zemax_model_telescope}
+	\end{center}
+\end{figure}
+
+\newpage
+\section{Design development and optimization}
+A preliminary design have been set for the PDR and the main points are summarized at each optimization step of this report.
+
+\subsection{Imaging the exit pupil of the telescope onto the DM}
+The first branch consists on an imaging system of the telescope pupil onto the DM. The beam has to be collimated and the footprint has to take the entire clear aperture of the DM (for the DM-468 from ALPAO $\diameter_{\text{DM}}$~=~33~mm).\\
+The beam on the DM has to be reflected with a certain angle otherwise the reflected beam comes back on itself. The maximum acceptable angle can be calculated considering the position error of the beam per actuator on the DM. We can align the beam with an error of $1/10^{th} \Lambda$ ($\Lambda$ the actuator pitch $= 1.5$ mm for the ALPAO DM-468). In order for the projected beam diameter to be no more than 10\% smaller than the DM diameter on both side, the tilt of the DM must be no more than $\alpha$~(figure \ref{fig:OAP0_DM_diam_beam_diam})~:
+\begin{eqnarray}
+	\alpha &= &\arccos\left(1-\frac{1}{5}\frac{\Lambda}{\diameter_{\text{DM}}}\right)\\
+	\alpha &= &\arccos\left(1-\frac{1}{5}\frac{1.5}{33}\right)\\
+	\alpha &= &7.73^{ \circ}\\
+	2\alpha &= &15.46^{ \circ}
+\end{eqnarray}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=0.3\textwidth]{images/OAP0_DM_diam_beam_diam.PNG}
+		\caption{Sketch of the input and output beam depending on the tilt angle of the DM}\label{fig:OAP0_DM_diam_beam_diam}
+	\end{center}
+\end{figure}
+The input beam diameter is then :
+\begin{equation}
+	\diameter_{\text{DM-beam}} = \diameter_{\text{DM}} \cos{\alpha} = 33\times \cos{(7.73)} = 32.7 \text{ mm}
+\end{equation}
+
+In order to have a collimated beam on the DM with a diameter of $\diameter_{\text{DM-beam}}$, the focal length of the OAP0 is calculated by the following sequence of equations. To visualize the parameters needed and the context we can look at figure~\ref{fig:sketch_ray_tracing_OAP0}. The with an angle $\theta$ with the corresponding reference coordinates $\left(0,x',y'\right)$. The ray $\Delta$CR corresponds to the chief ray, $\Delta\alpha u$ is the "upper" marginal ray and $\Delta\alpha b$ is the "bottom" marginal ray. The origin is placed at the focal plane of the telescope.
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=.8\textwidth]{images/sketch_ray_tracing_OAP0.PNG}
+		\caption{Ray tracing of a tilted parabola}\label{fig:sketch_ray_tracing_OAP0}
+	\end{center}
+\end{figure}
+In the reference coordinates $\left(0,x',y'\right)$, we have (with PFL the Parental Focal Length of the OAP):
+\begin{itemize}
+	\item equation of the parabola $\theta$ : 
+	\begin{equation}
+	y' = \frac{x'^2}{4\,\text{PFL}}-\text{PFL}	\label{eq:parabola_theta}
+	\end{equation}
+	\item equation of $\Delta\alpha u$ : \begin{equation}
+	y' = -\frac{1}{\tan\left(\theta+\alpha\right)}x' \label{eq:delta_alphau}
+	\end{equation}
+	\item equation of $\Delta\alpha b$ : \begin{equation}
+	y' = -\frac{1}{\tan\left(\theta-\alpha\right)}x' \label{eq:delta_alphab}
+	\end{equation}
+\end{itemize}
+%
+%Determination of $x'_{\text{CR}\theta}$ (intersection between parabola $\theta$ and $\Delta$CR) :\\ \eqref{eq:parabola_theta} = \eqref{eq:delta_CR}\\
+%\begin{equation}
+%	x'_{\text{CR}\theta} = 2\,\text{PFL}\left(-\frac{1}{\tan\theta}+\sqrt{\frac{1}{\tan^2\theta}+1}\right)
+%\end{equation}
+
+Determination of $x'_{\text{Ex}\theta\,\,u}$ (intersection between parabola $\theta$ and $\Delta\alpha u$) :\\ \eqref{eq:parabola_theta} = \eqref{eq:delta_alphau}\\
+\begin{equation}
+	x'_{\text{Ex}\theta\,\,u} = 2\,\text{PFL}\left(-\frac{1}{\tan\left(\theta+\alpha\right)}+\sqrt{\frac{1}{\tan^2\left(\theta+\alpha\right)}+1}\right)
+\end{equation}
+
+Determination of $x'_{\text{Ex}\theta\,\,b}$ (intersection between parabola $\theta$ and $\Delta\alpha b$) :\\ \eqref{eq:parabola_theta} = \eqref{eq:delta_alphab}\\
+\begin{equation}
+	x'_{\text{Ex}\theta\,\,b} = 2\,\text{PFL}\left(-\frac{1}{\tan\left(\theta-\alpha\right)}+\sqrt{\frac{1}{\tan^2\left(\theta-\alpha\right)}+1}\right)
+\end{equation}
+
+In order to have the OAP0 output beam diameter equal to the DM clear aperture we have~:
+\begin{equation}
+	x'_{\text{Ex}\theta\,\,u}-x'_{\text{Ex}\theta\,\,b} = \diameter_\text{DM-beam}
+\end{equation}
+The parental focal length (see appendix~\ref{sec:EFL2PFL}) of OAP0 is :
+\begin{equation}
+	\text{PFL} = \frac{1}{2}\frac{\diameter_\text{DM-beam}}{-\frac{1}{\tan\left(\theta+\alpha\right)}+\sqrt{\frac{1}{\tan^2\left(\theta+\alpha\right)}+1}+\frac{1}{\tan\left(\theta-\alpha\right)}-\sqrt{\frac{1}{\tan^2\left(\theta-\alpha\right)}+1}}
+\end{equation}
+Using the equation~\eqref{eq:EFL2PFL} described in appendix~\ref{sec:EFL2PFL} we can transform the parental focal length into the effective focal length.\\
+
+For the OAP0 the angle $\alpha_{\text{OAP0}}$ is
+\begin{eqnarray}\label{eq:alpha_OAP0}
+	\alpha_{\text{OAP0}} &= &\arctan\left(\frac{\diameter_{\text{ExP}/2}}{\overline{\text{ExP-FP}}}\right)
+\end{eqnarray} 
+The numerical application of \eqref{eq:alpha_OAP0} with $\diameter_{\text{ExP}} = 727.4046$ mm and $\overline{\text{ExP-FP}} = 10338.74$ mm gives $\alpha_{\text{OAP0}}  = 2.015\degree$, the aperture demi~angle of the beam arriving on the first OAP.\\
+
+After the discussion we had with Paolo Spano, we took his advice into account and choose the parabola tilt angle according to the following precept : $\theta= 35\degree$ is a critical choice and $\theta > 35\degree$ is a nightmare (manufacturing and alignment). We should take an tilt angle smaller than 30$\degree$ to be realistic and the smaller the best. However, we are limited by the space around the focal plane because of the field correction lens (represented by the 2 surfaces around the FP on figure~????????????????????).
+
+
+We  can set the parabola tilt angle to $\theta = 20\degree$ in order to keep this angle as small as possible to limit aberrations.\\
+
+Using these inputs the focal length of the OAP0 is :
+\begin{equation}
+	\text{PFL}_{\text{OAP0}} = 443.13\,\text{mm}	\nonumber
+\end{equation}
+
+
+This value is too specific so we round it to 460 mm. The image of the exit pupil given by OAP0 gives the position of the DM. Its position $p_i$ relative to the OAP0 vertex is given by (we use Gauss law)~:
+\begin{eqnarray}
+	p_i &= &\frac{p_o\,\text{PFL}_{\text{OAP0}}}{p_o+\text{PFL}_{\text{OAP0}}}\\
+	p_i &= &\frac{-(10338.74+464.77)464.77}{-10338.74}\\
+	p_i &= &480.47\,\text{mm}
+\end{eqnarray}
+The Zemax "pick up pupil position" macro is used to get the perfect DM position wrt the OAP0. The DM is then at $p_i = 487.823$ mm. Even if we understand that we cannot align the DM reflecting surface with this accuracy, we keep it in the Zemax model  and we will work on that during the tolerancing analysis. 
+\begin{figure}[H]
+%\centering
+\begin{subfigure}[b]{0.45\textwidth}
+	\begin{center}
+		\includegraphics[width=\linewidth]{images/FP_OAP0.PNG}
+		\caption{Layout}\label{fig:FP_OAP0}
+	\end{center}
+\end{subfigure}
+\begin{subfigure}[b]{0.45\textwidth}
+\begin{center}
+		\includegraphics[width=\linewidth]{images/DM_beam_footprint.PNG}
+		\caption{Zemax footprint diagram of the beam on the DM}\label{fig:DM_beam_footprint}
+	\end{center}
+\end{subfigure}
+\caption{Zemax model of the 1rst part of the AO design}
+\end{figure}
+
+The beam footprint on the DM shows that all the field fits inside the clear aperture. The maximum diameter is equal to 32.963 mm ($< 33$ mm). The angle of the DM is set to -7.73\degree (and not 7.73\degree) because the footprint of the beam is larger when the DM tilt angle does not follow the stop angle (see~\cite{cite:Design90degOAP}). Indeed when we work with OAPs the image stop after an OAP is not perpendicular to the optical axis. The OAP introduce a tilt angle of the image plane. If we tilt the DM in the opposite position of this OAP-introduced tilt angle we add aberrations whereas if we tilt it the same direction we can compensate for it.
+
+
+\subsection{Option to let the beam going through the bench}
+When the AO is off we want the beam to go through the bench without taking the AO path. In order to do that we place a folding mirror nearby the focal plane (to size it as small as possible) to pick up the beam and send it to the AO. When the AO if off, the pick up mirror is put down and the beam goes straight. The angle of the pickup mirror is determined to make its size as small possible and to allow that all optics we have to implement after can be mounted on mechanical structure properly.
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=.4\textwidth]{images/FP_DM.PNG}
+		\caption{Zemax model from the telescope beam to the DM using a folding mirror}\label{fig:FP_DM}
+	\end{center}
+\end{figure}
+We could also add this fold mirror when the AO is off to bend the non corrected beam. The percentage of time the AO is off is less than when it is on. The light would reflect on the two mirror surfaces fewer times when it is off. This option will be studied for the next model of the AO (it is not implemented here).
+
+\subsection{Imaging the pupil on the TT modulation mirror}
+
+\subsubsection{First approach}
+We need to image the pupil on the TT modulation mirror. Moreover, we know that to compensate for the introduced aberration from OAP0 we can use an OAP1 with the same focal length. The F/D ratio would stay the same as the telescope one which is favourable for the science path.\\
+Figure~\ref{fig:Zemax_model_FP_OAP1} shows that to model this combination we use the "chief ray" solve on Zemax (Lens data) to keep the coordinates following the beam path. OAP1 is placed at the exact inverse position of OAP0 in order to compensate for its aberrations so the intermediate focal plane is near the telescope focal plane.\\
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=\textwidth]{images/Zemax_model_FP_OAP1.PNG}
+		\caption{Zemax model from the telescope beam to the intermediate focal plane}\label{fig:Zemax_model_FP_OAP1}
+	\end{center}
+\end{figure}
+We use an optimization (smallest spot radius) to go to the best focal plane (surface \# 26 thickness is set as variable) and in order to consider the field curvature we apply a image radius of variable curvature. The optimization using a merit function is done on the image surface to get the smallest spot radius of the central beam (FoV = 0'). We can see that the spot diameter varies between 0.262~$\mu$m and 0.009~$\mu$m (the center of the FoV) but when we look the spots with the Airy disk we can say that the beam well focused.\\
+However, the radius of the image curvature is smaller than the telescope output field of curvature so we did not compensate for that, instead we increase it (we will see how we could work on that or not).\\
+
+Now, to find the tip-tilt modulation mirror diameter we need to go a step further. We know that we need to arrive on the pyramid roof (P-WFS) with a corresponding~:
+\begin{equation}
+	 F\#=2\frac{\text{pyramid roof}}{\lambda}\label{eq:FnumEq}
+\end{equation}
+Taking a pyramid roof of about $20~\mu$m according to Jean-Pierre Veran (private communication) at $\lambda~=~0.6~\mu$m we have~:
+\begin{equation}
+	F\# = 66.7\label{eq:Fnum}
+\end{equation}
+We round this value to F\#~=~60 (we need to investigate the pyramid roof size that can be manufactured). We know we do not want a long focal distance for the converging optical system because it would take a lot of space and we want to reduce the number of optical surface as much as possible. Arbitrarily, we add the constraint that $f_\text{OAP3} < 800$ mm. Then we have~:
+\begin{eqnarray}
+	\diameter_\text{TT mod mirror} &= &\frac{f_\text{OAP3}}{\text{F}\#} \text{ mm} \nonumber\\
+	\diameter_\text{TT mod mirror} &\leq &\frac{800}{60}\text{ mm} \nonumber\\
+	\diameter_\text{TT mod mirror} &\leq &13\text{ mm} \label{eq:TTmirSup}
+\end{eqnarray}
+We know also that the magnification of OAP1 and OAP2 is given by :
+\begin{equation}
+	G_t = \frac{f_\text{OAP2}}{f_\text{OAP1}} = \frac{\diameter_\text{TT mod mirror}}{\diameter_\text{DM-beam}}\label{eq:Gt}
+\end{equation}
+Now, if we look at the current Zemax model (figure~\ref{fig:Zemax_model_FP_OAP1}), we can see that if the focal length of OAP2 is smaller than 175~mm, we could not let the beam go through the bench (removing the 1rst folding mirror) because it would touch the OAP2 mount. This constraint and equation~\eqref{eq:Gt} bring to~:
+\begin{eqnarray}
+		\frac{\diameter_\text{TT mod mirror}}{\diameter_\text{DM-beam}}f_\text{OAP1} &\geq &175\text{ mm} \nonumber\\
+		\diameter_\text{TT mod mirror} &\geq & 175\frac{\diameter_\text{DM-beam}}{f_\text{OAP1}} \nonumber\\
+		\diameter_\text{TT mod mirror} &\geq &12.5\text{ mm}\label{eq:TTmirInf}
+\end{eqnarray}
+Looking at conditions~\eqref{eq:TTmirSup} and~\eqref{eq:TTmirInf} we can chose a standard tip tilt modulation mirror diameter of 0.5" (12.7 mm).\\
+
+We choose $\diameter_\text{TT mod mirror} = 12.7$ mm so $f_\text{OAP2} = 178.6$ mm. We round this value to 180 mm. The OAP2 tip angle is set arbitrarily to 10\degree~ to avoid aberrations as much as possible.
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=.5\textwidth]{images/FP_OAP2_wrongV.PNG}
+		\caption{Zemax model from the telescope beam to the tip-tilt modulation mirror, where we see the space problem}\label{fig:FP_OAP2_wrongV}
+	\end{center}
+\end{figure}
+Looking at figure~\ref{fig:FP_OAP2_wrongV} we can see that some room for the first folding mirror mount we can not add the OAP2 at this position because the beam would be cut off. Moreover, the TT modulation mirror would be close to the intermediate focal plane and there would be no position where to place a dichroic filter to send the light to the science.
+
+\subsubsection{Second approach}
+We can bend the path before arriving on the DM in order to save space for the optical elements (figure~\ref{fig:FP_DM_FoldMirror}). This way we can avoid the troubles we have with the first approach.
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=.4\textwidth]{images/FP_DM_FoldMirror.PNG}
+		\caption{Zemax model from the telescope beam to the DM using a folding mirror to bend the path before the DM}\label{fig:FP_DM_FoldMirror}
+	\end{center}
+\end{figure}
+The tilt angle of the DM becomes negative in the system coordinates to keep it as close as possible to the OAP0 stop plane. The new beam diameter on the DM is equal to 32.98 mm at its maximum.
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=.8\textwidth]{images/Zemax_model_FP_OAP1_2nd_approach.PNG}
+		\caption{Zemax model from the telescope beam to the intermediate focal plane}\label{fig:Zemax_model_FP_OAP1_2nd_approach}
+	\end{center}
+\end{figure}
+The OAPs angle has been set to 30\degree~ because if we take the fold mirror volume into account we need some room for its mount (the mirror mount volume is taken from~\cite{cite:ThorlabsKS2} to have a first estimate). After redoing the same optimization as before, the intermediate focal plane aberrations are larger than with the first version. However the radius of the field curvature is larger than the first one (but still smaller than the telescope field curvature).
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=.5\textwidth]{images/OPD_Fan_Intermediate_FP_2nd_approach.PNG}
+		\caption{OPD Fan at the intermediate focal plane}\label{fig:OPD_Fan_Intermediate_FP_2nd_approach}
+	\end{center}
+\end{figure}
+
+To design the rest of the optic we can keep the constraint given by equation~\eqref{eq:TTmirSup} repeated here because the F\# does not chage~:
+\begin{equation}
+	\diameter_\text{TT mod mirror} \leq 13\text{ mm}\nonumber
+\end{equation}
+However, the constraint that limited the focal length of OAP2 (equation~\eqref{eq:TTmirInf}) can be released because the beam does not go near the fold mirror.\\
+This constraint lifter, with a TT modulation mirror diameter of 0.5" (set arbitrarily) we can determine the focal length of OAP2 of 175~mm. The TT modulation beam footprint maximum diameter is 12.64~mm for a TT angle of 10\degree. Figure~\ref{fig:Zemax_model_FP_TTmod_2nd_approach} shows the Zemax model and beam footprint on the TT modulation mirror.
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=\textwidth]{images/Zemax_model_FP_TTmod_2nd_approach.PNG}
+		\caption{Zemax model from the telescope beam to the tip-tilt modulation mirror}\label{fig:Zemax_model_FP_TTmod_2nd_approach}
+	\end{center}
+\end{figure}
+We can see that there is not so much space for the tip-tilt modulation mirror (the dimensions are taken from~\cite{cite:S235PI} just to have an idea). We know that we will implement a dichroic mirror nearby the intermediate focal plane to send visible light to the WFS path and the rest to the science. The idea is then to bend the WFS path and leave the science light going straight (fig~\ref{fig:Zemax_model_FP_TTmod_fold_2nd_approach}).
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=.6\textwidth]{images/Zemax_model_FP_TTmod_fold_2nd_approach.PNG}
+		\caption{Zemax model from the telescope beam to the tip-tilt modulation mirror with the dichroic}\label{fig:Zemax_model_FP_TTmod_fold_2nd_approach}
+	\end{center}
+\end{figure}
+
+\subsection{Focus of the beam on the pyramid apex}
+Now we can calculate the OAP3 properties. Taking the TT modulation diameter of 12.7~mm and the F/D ratio equal (at least) to 60 (equation \eqref{eq:Fnum}) we find that~: $f_\text{OAP3}~\geq~762$~mm. We chose $f_\text{OAP3}~=~800$~mm arbitrarily. In order to keep the image of the exit pupil of the telescope (so the image of the TT modulation mirror) real the TT modulation mirror has to be at least at $f_\text{OAP3}$ from OAP3. To shorten as much as possible the distances we chose to place the TT modulation mirror at a distance $\geq f_\text{OAP3}$ from OAP3, its image is then at its focal plane. The OAP3 is decentered with a pick up of OAP2 output beam decenter to reduce aberrations.
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=\textwidth]{images/Zemax_model_FP_OAP3_2nd_approach.PNG}
+		\caption{Zemax model from the telescope beam to focal plane of OAP3}\label{fig:Zemax_model_FP_OAP3_2nd_approach}
+	\end{center}
+\end{figure}
+We can see in figure~\ref{fig:Zemax_model_FP_OAP3_2nd_approach} that the focal plane of the OAP3 is on the TT mirror, and the space is large between the TT modulation mirror and the OAP3. Moreover, the angle between the input and output beam on the OAP3 is about 2\degree~ which is too small to insert a fold mirror. We change the OAP3 decentring value to the number that correspond approximately to 10\degree~ of amgular separation between in/out beams and we add a fold mirror to save space.
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=\textwidth]{images/Zemax_model_FP_OAP3_fold_2nd_approach.PNG}
+		\caption{Zemax model from the telescope beam to focal plane of OAP3 with a fold mirror and decentring optimization}\label{fig:Zemax_model_FP_OAP3_fold_2nd_approach}
+	\end{center}
+\end{figure}
+The pyramid apex will be at the focal plane of OAP3.
+The final OPD fan is given figure~\ref{fig:OPD_Fan_PyrApex_2nd_approach}.
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=.5\textwidth]{images/OPD_Fan_PyrApex_2nd_approach.PNG}
+		\caption{OPD fan at the focal plane of OAP3 (pyramid apex)}\label{fig:OPD_Fan_PyrApex_2nd_approach}
+	\end{center}
+\end{figure}
+
+\subsection{Image the pupil on the CCD detector}\label{subsec:4eme_partie}
+The detector is the Nuvuu EMCCD with 128~pixels and a pixel size of $24~\mu$~m. We have to sample the beam with at least 1 pixel per actuator. In order to relax the alignment problems we can oversample the beam. According to Jean-Pierre Veran advice an oversampling of 1.5 should be enough. The ALAPO DM-468 has 22 actuators across the clear aperture diameter (so 23 pitches). Then we can calculate the beam diameter on the detector :
+\begin{eqnarray}
+	\diameter_{\text{CCD}} &= &\#_{\text{actuator across \diameter}}\times \text{PxSize}\times\text{Oversampling factor}\\
+	\diameter_{\text{CCD}} &= &22\times 24~\mu\text{m}\times 1.5\\
+	\diameter_{\text{CCD}} &= &0.792\,\,\text{mm}
+\end{eqnarray}
+The pupil has to be images on the camera. The TT mirror (pupil plane) image through the OAP3 is at the infinity. So when we image it through the relay lens the pupil plane arrives at the focal plane of the relay lens. Moreover, in order to get the beam size on the camera, the focal length of the relay lens ($f_{\text{LR}}$, see appendix~\ref{sec:PYR2CCD}) has to be~:
+\begin{eqnarray}
+	f_{\text{LR}} &= &\text{F}\# \times \diameter_{\text{CCD}}\\
+	f_{\text{LR}} &= &60\times 0.792\\
+	f_{\text{LR}} &= &47.52\,\,\text{mm}
+\end{eqnarray}
+The remaining optics have been implemented in the Zemax model just to have an estimation of the space no optimization has been done (we can already see that the diameter is not precisely of $\diameter_\text{CCD}$).\\
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=\textwidth]{images/Zemax_model_FP_CCD.PNG}
+		\caption{Zemax model of the bench until the CCD camera}\label{fig:Zemax_model_FP_CCD}
+	\end{center}
+\end{figure}
+
+\subsection{Atmopsheric Dispersion Compensator (ADC)}
+We are designing an ADC to compensate the atmospheric dispersion (see appendix\ref{app:ADC}). The geometric parameters and the glass are not set yet this is why we do not have implemented it in the Zemax model for now. However, we can already say that the ADC would probably be inserted between OAP2 and OAP3 because the beam is collimated.
+\newpage
+% BIBLIOGRAPHIE
+\bibliographystyle{ieeetr}
+\renewcommand{\bibname}{References}
+\bibliography{refbib/references_20180227_AO_design_report}
+\addcontentsline {toc}{chapter}{References}
+\addcontentsline {toc}{chapter}{Appendix}
+\input{appendix/appendixes.tex}
+
+
+
+
+
+
+
+\end{document}

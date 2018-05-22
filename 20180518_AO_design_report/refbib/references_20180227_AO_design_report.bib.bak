@@ -1,0 +1,20 @@
+% Encoding: windows-1252
+
+@Article{cite:Design90degOAP,
+  author  = {Robert M. Malone and Daniel Dolan and Gerald Stevens and W.D. Turley},
+  title   = {Design of a thermal imaging diagnostic using 90 degree off-axis parabolic mirrors},
+  journal = {Proceedings of SPIE},
+  year    = {2006},
+}
+
+@Misc{cite:S235PI,
+  author = {Physik Instrument},
+  title  = {S335 fast tiptilt platform},
+  year   = {2018},
+  url    = {https://www.physikinstrumente.com/en/products/z-tip-tilt-platforms/piezo-platforms/s-335-fast-tiptilt-platform-300711/#c31158},
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}
+
+% This file was created with JabRef 2.10.
+% Encoding: Cp1252

@@ -1,0 +1,246 @@
+%% TRICKS
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Minipage 2 tabular
+
+\begin{table}[!htb]
+    \begin{minipage}{.5\linewidth}
+      \centering
+        \begin{tabular}{ll}
+            1 & 2
+        \end{tabular}
+    \end{minipage}%
+    \begin{minipage}{.5\linewidth}
+      \centering
+        \begin{tabular}{ll}
+            3 & 4
+        \end{tabular}
+    \end{minipage}
+    \caption{Global caption} 
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% 1 FIGURE
+
+\begin{figure}[!h]
+	\begin{center}
+		\includegraphics[height]{img/}
+		\caption{•}
+		\label{•}
+	\end{center}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% 2 SUBFIGURE (in line)
+
+\begin{figure}[!h]
+	\begin{center}
+		\subfigure[]{\includegraphics[height]{img/}}
+		\subfigure[]{\includegraphics[height]{img/}}
+		\caption{•}
+		\label{•}
+	\end{center}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% 
+
+\begin{figure}[!htb]
+    \centering
+    \begin{minipage}{.5\textwidth}
+        \centering
+        \includegraphics[width=0.3\linewidth, height=0.15\textheight]{img_field_rotation2.jpg}
+        \caption{$dt=0.1$}
+        \label{fig:prob1_6_2}
+    \end{minipage}%
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \includegraphics[width=0.3\linewidth, height=0.15\textheight]{img_field_rotation2.jpg}
+        \caption{$dt =$}
+        \label{fig:prob1_6_1}
+    \end{minipage}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% WarningPanel
+
+\begin{figure}[!h]
+	\begin{center}
+		\includegraphics[height=1cm]{img/warning.png}
+	\end{center}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% MaterialSelectionTable
+
+\begin{table}[!h]
+	\begin{center}
+		\begin{tabular}{lll}
+		\hline
+		\textbf{Part} & \textbf{Material} & \textbf{Justification}\\
+		\hline
+		 &  & \\
+		\hline
+		 &  & \\
+		\hline
+		 &  & \\
+		\hline
+		 &  & \\
+		\hline
+		 &  & \\
+		\hline
+		 &  & \\
+		\hline
+		 &  & \\
+		\hline
+		\end{tabular}
+		\caption{Material selection}
+		\label{tab_materialSelectionTab01}
+	\end{center}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Material
+
+\begin{table}[!h]
+	\begin{center}
+	\begin{tabular}{clc}
+	\hline
+	$E$ & $-$ &[N/mm$^2$]\\ 				% Young modulus
+	\hline
+	$\nu$ & $-$ & [-]\\						% Poisson's modulus
+	\hline
+	$G$ & $-$ & [N/mm$^2$]\\				% Shear modulus
+	\hline
+	$\rho$ & $-$ & [kg/m$^3$]\\				% Density
+	\hline
+	$R_m$ & $-$ & [N/mm$^2$]\\ 				% limite de traction
+	\hline
+	$R_{p0.2}$ & $-$ & [N/mm$^2$]\\ 		% = R_e = yield strength = \sigma_y
+	\hline
+	$\alpha$ & $-\cdot 10^{-6}$ & [K$^{-1}$]\\			% CTE $\cdot 10^{-6}$
+	\hline
+	$K$ & $-$ & [W/(m$\cdot$ K)]\\ 			% Thermal conductivity
+	\hline
+	$c$ & $-$ & [J/(kg $\cdot$ K)]\\		% Specific heat
+	\hline
+	\end{tabular}
+	\caption{•} %\\ \scriptsize{Source: }
+	\label{mat_}
+	\end{center}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Material tabular
+
+	\begin{tabular}{clc}
+	\hline
+	$E$ & $-$ &[N/mm$^2$]\\ 				% Young modulus
+	\hline
+	$\nu$ & $-$ & [-]\\						% Poisson's modulus
+	\hline
+	$G$ & $-$ & [N/mm$^2$]\\				% Shear modulus
+	\hline
+	$\rho$ & $-$ & [kg/m$^3$]\\				% Density
+	\hline
+	$R_m$ & $-$ & [N/mm$^2$]\\ 				% limite de traction
+	\hline
+	$R_{p0.2}$ & $-$ & [N/mm$^2$]\\ 		% = R_e = yield strength = \sigma_y
+	\hline
+	$\alpha$ & $-\cdot 10^{-6}$ & [K$^{-1}$]\\			% CTE $\cdot 10^{-6}$
+	\hline
+	$K$ & $-$ & [W/(m$\cdot$ K)]\\ 			% Thermal conductivity
+	\hline
+	$c$ & $-$ & [J/(kg $\cdot$ K)]\\		% Specific heat
+	\hline
+	\end{tabular}
+	\caption{•} %\\ \scriptsize{Source: }
+	\label{mat_}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% 4 materials multiTable
+
+\begin{table}[!htb]
+	\centering
+    \begin{minipage}{.32\linewidth}
+      \centering
+        \input{mat/mat_PYROFIL_MS_40_12M_tabular.tex}
+    \end{minipage}
+    \hspace{1cm}
+    \begin{minipage}{.32\linewidth}
+      \centering
+        \input{mat/mat_InvarAC36_tabular.tex}
+    \end{minipage}
+    \\
+    \vspace{1cm}
+    \begin{minipage}{.32\linewidth}
+      \centering
+        \input{mat/mat_S235JRG2_tabular.tex}
+    \end{minipage}
+    \hspace{1cm}
+    \begin{minipage}{.32\linewidth}
+      \centering
+        \input{mat/mat_S235JRG2_tabular.tex}
+    \end{minipage}
+    %\caption{}
+    %\label{}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% TIKZ SCALEBOX
+
+\begin{figure}[!h]
+	\begin{center}
+		\scalebox{1.0}{\input{}}
+		\caption{}
+		\label{}
+	\end{center}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% SIMPLE TABLE
+
+\begin{table}[!h]
+	\begin{center}
+	\begin{tabular}{clc}
+	\hline
+	
+	\hline	
+	
+	\hline
+	\end{tabular}
+	\caption{} %\\ \scriptsize{Source: }
+	\label{}
+	\end{center}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% EVALUATION SIMPLE
+
+\FPeval\b{\a+\c}
+\FPeval\bDisplay{\b*1000}
+\FPround{\bDisplay}{\bDisplay}{2}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%
