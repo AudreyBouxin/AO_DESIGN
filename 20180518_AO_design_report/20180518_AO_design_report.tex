@@ -20,6 +20,7 @@ CCD & Charge Coupled Device\\
 CMOS & Complementary Metal Oxide Semiconductor\\
 DAG & Dogu Anadolu Gozlemevi (East Anatolian Observatory)\\
 DM & Deformable Mirror\\
+FCL & Field Correction Lens\\
 FoV & Field-of-View\\
 FWHM & Full Width at Half Maximum\\
 NCPA & Non Common Path Aberrations
@@ -159,24 +160,39 @@ For the OAP0 the angle $\alpha_{\text{OAP0}}$ is
 \end{eqnarray} 
 The numerical application of \eqref{eq:alpha_OAP0} with $\diameter_{\text{ExP}} = 727.4046$ mm and $\overline{\text{ExP-FP}} = 10338.74$ mm gives $\alpha_{\text{OAP0}}  = 2.015\degree$, the aperture demi~angle of the beam arriving on the first OAP.\\
 
-After the discussion we had with Paolo Spano, we took his advice into account and choose the parabola tilt angle according to the following precept : $\theta= 35\degree$ is a critical choice and $\theta > 35\degree$ is a nightmare (manufacturing and alignment). We should take an tilt angle smaller than 30$\degree$ to be realistic and the smaller the best. However, we are limited by the space around the focal plane because of the field correction lens (represented by the 2 surfaces around the FP on figure~????????????????????).
-
+After the discussion we had with Paolo Spano, we took his advice into account and choose the parabola tilt angle according to the following precept : $\theta= 35\degree$ is a critical choice and $\theta > 35\degree$ is a nightmare (manufacturing and alignment). We should take an tilt angle smaller than 30$\degree$ to be realistic and the smaller the best. However, we are limited by the space around the focal plane because of the field correction lens (represented by the bloc on figure~\ref{fig:FCL_space_OAP0}). Depending on where it is going to be placed we would have to increase the angle of OAP0. \textbf{An email has been sent to AMOS who is going to design the FCL to know if it is possible to have it before the focal plane.}
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=.9\textwidth]{images/FCL_space_OAP0.PNG}
+		\caption{Field correction lens position from the focal plane of the telescope}\label{fig:FCL_space_OAP0}
+	\end{center}
+\end{figure}
 
 We  can set the parabola tilt angle to $\theta = 20\degree$ in order to keep this angle as small as possible to limit aberrations.\\
 
-Using these inputs the focal length of the OAP0 is :
+Using these inputs the focal length of the OAP0 is (appendix~\ref{app:DimensionnementOAPs}): $\text{PFL}_{\text{OAP0}} = 443.13\,\text{mm}	\nonumber$.\\
+This value is too specific so we round it to\footnote{In Zemax, we enter the $\text{PFL}_{\text{OAP0}}$ and not the effective focal length in the coordinate break surface because using it, the translation is done before the tilt angle. This is why if we enter the translation in a surface before the coordinate break we cannot use the same length (we would then write the $\text{EFL}_{\text{OAP0}}$)}~:
 \begin{equation}
-	\text{PFL}_{\text{OAP0}} = 443.13\,\text{mm}	\nonumber
+	\text{PFL}_{\text{OAP0}} = 445\,\text{mm}	\nonumber
 \end{equation}
 
-
-This value is too specific so we round it to 460 mm. The image of the exit pupil given by OAP0 gives the position of the DM. Its position $p_i$ relative to the OAP0 vertex is given by (we use Gauss law)~:
+\newpage
+The image of the exit pupil given by OAP0 gives the position of the DM. Its position $p_i$ relative to the OAP0 vertex is given by (we use Gauss law)~:
 \begin{eqnarray}
 	p_i &= &\frac{p_o\,\text{PFL}_{\text{OAP0}}}{p_o+\text{PFL}_{\text{OAP0}}}\\
-	p_i &= &\frac{-(10338.74+464.77)464.77}{-10338.74}\\
-	p_i &= &480.47\,\text{mm}
+	p_i &= &\frac{-(10338.74+445)445}{-10338.74}\\
+	p_i &= &464\,\text{mm}
 \end{eqnarray}
-The Zemax "pick up pupil position" macro is used to get the perfect DM position wrt the OAP0. The DM is then at $p_i = 487.823$ mm. Even if we understand that we cannot align the DM reflecting surface with this accuracy, we keep it in the Zemax model  and we will work on that during the tolerancing analysis. 
+The Zemax "pick up pupil position" macro is used to get the perfect DM position wrt the OAP0. The DM is then at $p_i = 493.08$ mm. Even if we understand that we cannot align the DM reflecting surface with this accuracy, we keep it in the Zemax model  and we will work on that during the tolerancing analysis\footnote{We always keep all the digit during an AO design in order to see what are the best results we can obtain with an ideal system.}. \\
+The image of the pupil through a tilted OAP is also tilted. This creates pupil aberrations.
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=.7\linewidth]{images/DM_pupil_tilt.PNG}
+		\caption{Tilted image of the pupil}\label{fig:DM_pupil_tilt}
+	\end{center}
+\end{figure}
+Here we want to place the DM at this pupil position. We also want the DM to be titled so we can choose its angle direction in order to compensate for the tilt introduced by the OAP.
+
 \begin{figure}[H]
 %\centering
 \begin{subfigure}[b]{0.45\textwidth}
