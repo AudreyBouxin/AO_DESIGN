@@ -237,12 +237,17 @@ We do not want the beam to go back in the field correction lens and we would lik
 \end{figure}
 Figure~\ref{fig:FP_2_intFP_FoldMirror} shows the new design with a folding mirror tilted at 20\degree. For more clarity we apply the real aperture size of the OAPs on layout 1. We can see on the footprint diagram that we can use two OAPs of 2~inches of diameter. The maximum diameter of the beam footprint (for a FoV~=~1') is about 49.9~mm. However, we should be careful and verify during the tolerance analysis that when we move the OAP in the alignment precision range we can do, the entire beam stays reflected on the OAP (no vignetting). Concerning the folding mirror, we can also use a diameter of 2~inches it is positioned at 298~mm from the DM (same as above, we have to check during the tolerancing that we do not have vignetting when moving around this position).\\
 
-After redoing the optimization of the intermediate focal plane position and the image radius of curvature we found spot diameters vary from 0.009~$\mu$m to 0.603~$\mu$m across the FoV.
+After redoing the optimization of the intermediate focal plane position and the image radius of curvature we found spot diameters vary from 0.009~$\mu$m (on-axis) to 0.603~$\mu$m (0.5') across the FoV (see figure~\ref{fig:IntermediateFP_SpotDiagram}).\\
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=.8\textwidth]{images/IntermediateFP_SpotDiagram.PNG}
+		\caption{Spot diagram at the intermediate focal plane for the AO FoV and the WFS path FoV}\label{fig:IntermediateFP_SpotDiagram}
+	\end{center}
+\end{figure}
 
-
-
-
-Now, as the OAP0 takes the exit pupil of the telescope (which is at  $\overline{\text{ExP-FP}}+\text{PFL}_{\text{OAP0}} = 10783.74~\text{mm}$)and images it, OAP1 does the same at the inverse distance. The image of the pupil where to place the tip-tilt mirror is at about 10330~mm which is too far from the optical bench. 
+\subsubsection{Imaging the pupil on the TT modulation mirror}
+The selection of the star in the FoV is made using two gimbals mirrors. These have to be positioned before the TT modulation mirror in order to simplify the command.
+Now, as the OAP0 takes the exit pupil of the telescope (which is at  $\overline{\text{ExP-FP}}+\text{PFL}_{\text{OAP0}} = 10783.74~\text{mm}$) and images it, OAP1 does the same at the inverse distance. The image of the pupil where to place the tip-tilt mirror is too far from the optical bench so we need another optical element. 
 
 
 
