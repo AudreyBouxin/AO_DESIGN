@@ -246,14 +246,15 @@ After redoing the optimization of the intermediate focal plane position and the 
 \end{figure}
 
 \subsubsection{Imaging the pupil on the TT modulation mirror}
-The selection of the star in the FoV is made using two gimbals mirrors. These have to be positioned before the TT modulation mirror in order to simplify the command.
-Now, as the OAP0 takes the exit pupil of the telescope (which is at  $\overline{\text{ExP-FP}}+\text{PFL}_{\text{OAP0}} = 10783.74~\text{mm}$) and images it, OAP1 does the same at the inverse distance. The image of the pupil where to place the tip-tilt mirror is too far from the optical bench so we need another optical element. 
+\hl{The selection of the star in the FoV is made using an XY stage where all the WFS path would be mounted (as we have a compact WFS path).}
+Now, as the OAP0 and OAP1 are the same, this optical configuration creates an image of the pupil of the same diameter at the same distance from the FP as the entrance pupil.\\ 
+It is so not possible to use it to place the TT modulation mirror which has to be about 10~mm in diameter and at a reasonable distance from FP.
+\hl{FOR these reasons........................................ we take a TT modulation mirror of \diameter 0.5~inch mounted on the fast tip-tilt platform S-331 from PI.}
+We want to have a beam of about 10~mm in diameter at the pupil to place the TT stage.\\
 
+We have also to note that we would like to introduce a dichroic membrane nearby the intermediate focal plane.
 
-
-
-
-Now, to find the tip-tilt modulation mirror diameter we need to go a step further. We know that we need to arrive on the pyramid roof (P-WFS) with a corresponding~:
+We know that we need to arrive on the pyramid roof (P-WFS) with a corresponding~:
 \begin{equation}
 	 F\#=2\frac{\text{pyramid roof}}{\lambda}\label{eq:FnumEq}
 \end{equation}
@@ -261,100 +262,10 @@ Taking a pyramid roof of about $20~\mu$m according to Jean-Pierre Veran (private
 \begin{equation}
 	F\# = 66.7\label{eq:Fnum}
 \end{equation}
-We round this value to F\#~=~60 (we need to investigate the pyramid roof size that can be manufactured). We know we do not want a long focal distance for the converging optical system because it would take a lot of space and we want to reduce the number of optical surface as much as possible. Arbitrarily, we add the constraint that $f_\text{OAP3} < 800$ mm. Then we have~:
-\begin{eqnarray}
-	\diameter_\text{TT mod mirror} &= &\frac{f_\text{OAP3}}{\text{F}\#} \text{ mm} \nonumber\\
-	\diameter_\text{TT mod mirror} &\leq &\frac{800}{60}\text{ mm} \nonumber\\
-	\diameter_\text{TT mod mirror} &\leq &13\text{ mm} \label{eq:TTmirSup}
-\end{eqnarray}
-We know also that the magnification of OAP1 and OAP2 is given by :
-\begin{equation}
-	G_t = \frac{f_\text{OAP2}}{f_\text{OAP1}} = \frac{\diameter_\text{TT mod mirror}}{\diameter_\text{DM-beam}}\label{eq:Gt}
-\end{equation}
-Now, if we look at the current Zemax model (figure~\ref{fig:Zemax_model_FP_OAP1}), we can see that if the focal length of OAP2 is smaller than 175~mm, we could not let the beam go through the bench (removing the 1rst folding mirror) because it would touch the OAP2 mount. This constraint and equation~\eqref{eq:Gt} bring to~:
-\begin{eqnarray}
-		\frac{\diameter_\text{TT mod mirror}}{\diameter_\text{DM-beam}}f_\text{OAP1} &\geq &175\text{ mm} \nonumber\\
-		\diameter_\text{TT mod mirror} &\geq & 175\frac{\diameter_\text{DM-beam}}{f_\text{OAP1}} \nonumber\\
-		\diameter_\text{TT mod mirror} &\geq &12.5\text{ mm}\label{eq:TTmirInf}
-\end{eqnarray}
-Looking at conditions~\eqref{eq:TTmirSup} and~\eqref{eq:TTmirInf} we can chose a standard tip tilt modulation mirror diameter of 0.5" (12.7 mm).\\
+We round this value to F\#~=~60 (we need to investigate the pyramid roof size that can be manufactured).\\
 
-We choose $\diameter_\text{TT mod mirror} = 12.7$ mm so $f_\text{OAP2} = 178.6$ mm. We round this value to 180 mm. The OAP2 tip angle is set arbitrarily to 10\degree~ to avoid aberrations as much as possible.
+We want then an vergence that takes the beam with a F# of 14 and brings it to 60. The TT modulation mirror is placed in this converging beam at the pupil position
 
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[width=.5\textwidth]{images/FP_OAP2_wrongV.PNG}
-		\caption{Zemax model from the telescope beam to the tip-tilt modulation mirror, where we see the space problem}\label{fig:FP_OAP2_wrongV}
-	\end{center}
-\end{figure}
-Looking at figure~\ref{fig:FP_OAP2_wrongV} we can see that some room for the first folding mirror mount we can not add the OAP2 at this position because the beam would be cut off. Moreover, the TT modulation mirror would be close to the intermediate focal plane and there would be no position where to place a dichroic filter to send the light to the science.
-
-\subsubsection{Second approach}
-We can bend the path before arriving on the DM in order to save space for the optical elements (figure~\ref{fig:FP_DM_FoldMirror}). This way we can avoid the troubles we have with the first approach.
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[width=.4\textwidth]{images/FP_DM_FoldMirror.PNG}
-		\caption{Zemax model from the telescope beam to the DM using a folding mirror to bend the path before the DM}\label{fig:FP_DM_FoldMirror}
-	\end{center}
-\end{figure}
-The tilt angle of the DM becomes negative in the system coordinates to keep it as close as possible to the OAP0 stop plane. The new beam diameter on the DM is equal to 32.98 mm at its maximum.
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[width=.8\textwidth]{images/Zemax_model_FP_OAP1_2nd_approach.PNG}
-		\caption{Zemax model from the telescope beam to the intermediate focal plane}\label{fig:Zemax_model_FP_OAP1_2nd_approach}
-	\end{center}
-\end{figure}
-The OAPs angle has been set to 30\degree~ because if we take the fold mirror volume into account we need some room for its mount (the mirror mount volume is taken from~\cite{cite:ThorlabsKS2} to have a first estimate). After redoing the same optimization as before, the intermediate focal plane aberrations are larger than with the first version. However the radius of the field curvature is larger than the first one (but still smaller than the telescope field curvature).
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[width=.5\textwidth]{images/OPD_Fan_Intermediate_FP_2nd_approach.PNG}
-		\caption{OPD Fan at the intermediate focal plane}\label{fig:OPD_Fan_Intermediate_FP_2nd_approach}
-	\end{center}
-\end{figure}
-
-To design the rest of the optic we can keep the constraint given by equation~\eqref{eq:TTmirSup} repeated here because the F\# does not chage~:
-\begin{equation}
-	\diameter_\text{TT mod mirror} \leq 13\text{ mm}\nonumber
-\end{equation}
-However, the constraint that limited the focal length of OAP2 (equation~\eqref{eq:TTmirInf}) can be released because the beam does not go near the fold mirror.\\
-This constraint lifter, with a TT modulation mirror diameter of 0.5" (set arbitrarily) we can determine the focal length of OAP2 of 175~mm. The TT modulation beam footprint maximum diameter is 12.64~mm for a TT angle of 10\degree. Figure~\ref{fig:Zemax_model_FP_TTmod_2nd_approach} shows the Zemax model and beam footprint on the TT modulation mirror.
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[width=\textwidth]{images/Zemax_model_FP_TTmod_2nd_approach.PNG}
-		\caption{Zemax model from the telescope beam to the tip-tilt modulation mirror}\label{fig:Zemax_model_FP_TTmod_2nd_approach}
-	\end{center}
-\end{figure}
-We can see that there is not so much space for the tip-tilt modulation mirror (the dimensions are taken from~\cite{cite:S235PI} just to have an idea). We know that we will implement a dichroic mirror nearby the intermediate focal plane to send visible light to the WFS path and the rest to the science. The idea is then to bend the WFS path and leave the science light going straight (fig~\ref{fig:Zemax_model_FP_TTmod_fold_2nd_approach}).
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[width=.6\textwidth]{images/Zemax_model_FP_TTmod_fold_2nd_approach.PNG}
-		\caption{Zemax model from the telescope beam to the tip-tilt modulation mirror with the dichroic}\label{fig:Zemax_model_FP_TTmod_fold_2nd_approach}
-	\end{center}
-\end{figure}
-
-\subsection{Focus of the beam on the pyramid apex}
-Now we can calculate the OAP3 properties. Taking the TT modulation diameter of 12.7~mm and the F/D ratio equal (at least) to 60 (equation \eqref{eq:Fnum}) we find that~: $f_\text{OAP3}~\geq~762$~mm. We chose $f_\text{OAP3}~=~800$~mm arbitrarily. In order to keep the image of the exit pupil of the telescope (so the image of the TT modulation mirror) real the TT modulation mirror has to be at least at $f_\text{OAP3}$ from OAP3. To shorten as much as possible the distances we chose to place the TT modulation mirror at a distance $\geq f_\text{OAP3}$ from OAP3, its image is then at its focal plane. The OAP3 is decentered with a pick up of OAP2 output beam decenter to reduce aberrations.
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[width=\textwidth]{images/Zemax_model_FP_OAP3_2nd_approach.PNG}
-		\caption{Zemax model from the telescope beam to focal plane of OAP3}\label{fig:Zemax_model_FP_OAP3_2nd_approach}
-	\end{center}
-\end{figure}
-We can see in figure~\ref{fig:Zemax_model_FP_OAP3_2nd_approach} that the focal plane of the OAP3 is on the TT mirror, and the space is large between the TT modulation mirror and the OAP3. Moreover, the angle between the input and output beam on the OAP3 is about 2\degree~ which is too small to insert a fold mirror. We change the OAP3 decentring value to the number that correspond approximately to 10\degree~ of amgular separation between in/out beams and we add a fold mirror to save space.
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[width=\textwidth]{images/Zemax_model_FP_OAP3_fold_2nd_approach.PNG}
-		\caption{Zemax model from the telescope beam to focal plane of OAP3 with a fold mirror and decentring optimization}\label{fig:Zemax_model_FP_OAP3_fold_2nd_approach}
-	\end{center}
-\end{figure}
-The pyramid apex will be at the focal plane of OAP3.
-The final OPD fan is given figure~\ref{fig:OPD_Fan_PyrApex_2nd_approach}.
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[width=.5\textwidth]{images/OPD_Fan_PyrApex_2nd_approach.PNG}
-		\caption{OPD fan at the focal plane of OAP3 (pyramid apex)}\label{fig:OPD_Fan_PyrApex_2nd_approach}
-	\end{center}
-\end{figure}
 
 \subsection{Image the pupil on the CCD detector}\label{subsec:4eme_partie}
 The detector is the Nuvuu EMCCD with 128~pixels and a pixel size of $24~\mu$~m. We have to sample the beam with at least 1 pixel per actuator. In order to relax the alignment problems we can oversample the beam. According to Jean-Pierre Veran advice an oversampling of 1.5 should be enough. The ALAPO DM-468 has 22 actuators across the clear aperture diameter (so 23 pitches). Then we can calculate the beam diameter on the detector :

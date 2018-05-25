@@ -9,9 +9,9 @@ import matplotlib.pyplot as plt
 
 " Parameters"
 DEG2RAD = np.pi/180;
-theta_OAP0  = 25*DEG2RAD;	#[rad]  pour l'OAP0
+theta_OAP0  = 20*DEG2RAD;	#[rad]  pour l'OAP0
 theta_OAP1 = theta_OAP0;
-theta_OAP2  = 10*DEG2RAD;	#[rad]  pour l'OAP2
+theta_OAP2  = 20*DEG2RAD;	#[rad]  pour l'OAP2
 #theta_OAP3  = 10*DEG2RAD;	#[rad]  pour l'OAP3
 ExP2FP = 10338.74;      #[mm]
 dExP   = 727.4046;      #[mm]
@@ -36,12 +36,13 @@ print('pi (DM)  : ', pi)
 fOAP1 = PFL_OAP0
 
  # pour l'OAP2
+print('-------------------------OAP2 : ')
 TTangle = 10*DEG2RAD;
-DTT = 10*cos(TTangle);            #[mm]
+DTT = 10#*np.cos(TTangle);            #[mm]
 fOAP2 = DTT/DDM*fOAP1;     #[-]
-alpha = atan(DTT*0.5/fOAP2);    #[rad] 
-PFL_OAP2 = (DTT/2)/2/(-1/tan(theta_OAP2+alpha)+(1/(tan(theta_OAP2+alpha))**2+1)**0.5+1/tan(theta_OAP2)-(1/(tan(theta_OAP2))**2+1)**0.5)  #[mm] pour l'OAP2
-EFL_OAP2 = 2*PFL_OAP2/(1+cos(theta_OAP2))
+alpha = np.arctan(DTT*0.5/fOAP2);    #[rad] 
+PFL_OAP2 = (DTT/2)/2/(-1/np.tan(theta_OAP2+alpha)+(1/(np.tan(theta_OAP2+alpha))**2+1)**0.5+1/np.tan(theta_OAP2)-(1/(np.tan(theta_OAP2))**2+1)**0.5)  #[mm] pour l'OAP2
+EFL_OAP2 = 2*PFL_OAP2/(1+np.cos(theta_OAP2))
 print('PFL_OAP2 : ', PFL_OAP2)
 # 
 # # Pour l'OAP3
