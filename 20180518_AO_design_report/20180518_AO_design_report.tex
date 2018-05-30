@@ -264,7 +264,41 @@ Taking a pyramid roof of about $20~\mu$m according to Jean-Pierre Veran (private
 \end{equation}
 We round this value to F\#~=~60 (we need to investigate the pyramid roof size that can be manufactured).\\
 
-We want then an vergence that takes the beam with a F# of 14 and brings it to 60. The TT modulation mirror is placed in this converging beam at the pupil position
+We want then a vergence that takes the beam with a F\# of 14 and brings it to 60. The TT modulation mirror is placed in this converging beam at the pupil position. At first approximation, we can do a geometrical dimensioning. We use a drawing software and apply the constraints to calculate which focal length and distance from the intermediate focal plane we need. In order to build this ray tracing properly we calculate the following parameters~:
+\begin{eqnarray}
+	F\#_\text{input} = \frac{\overline{\text{ExP-FP}}}{\diameter_{\text{ExtP}}}\nonumber\\
+	F\#_\text{output} = \frac{f_\text{lens}}{\diameter_\text{beam on the lens}}\nonumber\\
+	\gamma_\text{input} = \frac{1}{2F\#_\text{input}}\nonumber\\
+	\gamma_\text{output} = \frac{1}{2F\#_\text{output}}\nonumber
+\end{eqnarray}
+The image of the pupil is nearby the foci (at 0.06~mm) and has to be about 5~mm in diameter. Taking the angles and the beam diameter on the TT modulation mirror we find the focal length of the lens and the distance from the intermediate focal plane described figure~\ref{fig:SW_trace_rayons_lens_TTMM}.
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=.9\textwidth]{images/SW_trace_rayons_lens_TTMM.PNG}
+		\caption{Ray tracing using SolidWorks to approximate the converging lens before the TT modulation mirror}\label{fig:SW_trace_rayons_lens_TTMM}
+	\end{center}
+\end{figure}
+We introduce these results in Zemax using a paraxial lens (figure~\ref{fig:Zemax_model_FP_TTmod_noTilt}). We can see that the beam diameter is about 5~mm as expected.
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=\textwidth]{images/Zemax_model_FP_TTmod_noTilt.PNG}
+		\caption{Zemax model from the telescope beam to the TT modulation mirror using a paraxial lens}\label{fig:Zemax_model_FP_TTmod_noTilt}
+	\end{center}
+\end{figure}
+We want to tilt the TT modulation mirror to send the beam in a convenient direction. We need to add the ADC nearby a pupil plane, so if we want to use the pupil where the TT modulation mirror is placed we need some space around it to insert the ADC. We can tilt the TT modulation mirror with an angle of about 20\degree. The radius of the beam footprint on the TT modulation mirror measured on the Zemax model is~5.32~mm at maximum (which is smaller than 0.5~inch).\\
+Moreover, the focal length of 142~mm is not a common value so we can change it to 140~mm.\\
+
+We use the optimization tool to find the best focal plane (distance and radius of curvature at the image plane). As we are going to move all the WFS path with a XY stage to pick up the star, we can determine the beam footprint diameter on the paraxial lens with the on-axis case. We can see that the F\# of the beam arriving on the apex of the pyramid (figure~\ref{fig:Zemax_model_FP_TTmod_noTilt}) is F\#$~=~\frac{136.59+579.88}{7.1884*2}~=~58.5$ which is smaller than the F\#fixed before at 60. We can adjust it moving a little bit the paraxial lens from the intermediate focal plane. We find the final solution (figure~\ref{fig:Zemax_model_FP_ApexPyr}) with F\#$~=~\frac{136.59+597.35}{6.0897*2}~=~60.3$.\\
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=\textwidth]{images/Zemax_model_FP_ApexPyr.PNG}
+		\caption{Zemax model from the telescope beam to the apex of the pyramid WFS.}\label{fig:Zemax_model_FP_ApexPyr}
+	\end{center}
+\end{figure}
+
+
+\hl{STOOOOOOOOOOOOOOOOOOPPP}
+
 
 
 \subsection{Image the pupil on the CCD detector}\label{subsec:4eme_partie}
