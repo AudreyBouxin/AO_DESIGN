@@ -1,0 +1,1535 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.6)  30 MAY 2018 16:27
+entering extended mode
+**./20180518_AO_design_report.tex
+(20180518_AO_design_report.tex
+LaTeX2e <2017/01/01> patch level 1
+Babel <3.9r> and hyphenation patterns for 76 language(s) loaded.
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\size12.clo"
+File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+) (def/options.tex
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks14
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amscd.sty"
+Package: amscd 1999/11/29 v2.0 AMS Commutatitive Diagrams
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks15
+\ex@=\dimen103
+)
+\athelp@=\toks16
+\minaw@=\dimen104
+\bigaw@=\dimen105
+\minCDarrowwidth=\dimen106
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+Package: amsmath 2016/11/05 v2.16a AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+Package: amstext 2000/06/29 v2.01 AMS text
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen107
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count87
+LaTeX Info: Redefining \frac on input line 213.
+\uproot@=\count88
+\leftroot@=\count89
+LaTeX Info: Redefining \overline on input line 375.
+\classnum@=\count90
+\DOTSCASE@=\count91
+LaTeX Info: Redefining \ldots on input line 472.
+LaTeX Info: Redefining \dots on input line 475.
+LaTeX Info: Redefining \cdots on input line 596.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen108
+LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
+\macc@depth=\count92
+\c@MaxMatrixCols=\count93
+\dotsspace@=\muskip10
+\c@parentequation=\count94
+\dspbrk@lvl=\count95
+\tag@help=\toks17
+\row@=\count96
+\column@=\count97
+\maxfields@=\count98
+\andhelp@=\toks18
+\eqnshift@=\dimen109
+\alignsep@=\dimen110
+\tagshift@=\dimen111
+\tagwidth@=\dimen112
+\totwidth@=\dimen113
+\lineht@=\dimen114
+\@envbody=\toks19
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2817.
+LaTeX Info: Redefining \] on input line 2818.
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty"
+Package: babel 2016/04/23 3.9r The Babel package
+
+*************************************
+* Local config file bblopts.cfg used
+*
+("C:\Program Files\MiKTeX 2.9\tex\latex\arabi\bblopts.cfg"
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
+ babel
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\babel-english\english.ldf"
+Language: english 2017/01/24 v3.3q English support from the babel system
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.def"
+File: babel.def 2016/04/23 3.9r Babel common definitions
+\babel@savecnt=\count99
+\U@D=\dimen115
+)
+\l@canadian = a dialect from \language\l@american 
+\l@australian = a dialect from \language\l@british 
+\l@newzealand = a dialect from \language\l@british 
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\cite\cite.sty"
+LaTeX Info: Redefining \cite on input line 302.
+LaTeX Info: Redefining \nocite on input line 332.
+Package: cite 2015/02/27  v 5.5
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\enumitem\enumitem.sty"
+Package: enumitem 2011/09/28 v3.5.2 Customized lists
+\enitkv@toks@=\toks21
+\labelindent=\skip46
+\enit@outerparindent=\dimen116
+\enit@toks=\toks22
+\enit@inbox=\box28
+\enitdp@description=\count100
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\extsizes\extsizes.sty"
+Package: extsizes 1996/10/08 v1.0 Non Standard LaTeX Package
+
+
+Package ExtSizes Warning: It is better to use one of the extsizes classes,
+ if you can.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\size12.clo"
+File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf.sty"
+Package: epstopdf 2016/05/15 v2.6 Conversion with epstopdf on the fly (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty"
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\kvdefinekeys.sty"
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)))
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks23
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\kvsetkeys.sty"
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\etexcmds.sty"
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.sty"
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
+Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+Package: ifpdf 2016/05/14 v3.1 Provides the ifpdf switch
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+
+Package epstopdf Warning: No graphics package `graphic{s,x}' loaded.
+
+)) ("C:\Program Files\MiKTeX 2.9\tex\latex\fancyhdr\fancyhdr.sty"
+Package: fancyhdr 2016/09/06 3.8 Extensive control of page headers and footers
+\fancy@headwidth=\skip47
+\f@ncyO@elh=\skip48
+\f@ncyO@erh=\skip49
+\f@ncyO@olh=\skip50
+\f@ncyO@orh=\skip51
+\f@ncyO@elf=\skip52
+\f@ncyO@erf=\skip53
+\f@ncyO@olf=\skip54
+\f@ncyO@orf=\skip55
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.sty"
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count101
+\Gm@cntv=\count102
+\c@Gm@tempcnt=\count103
+\Gm@bindingoffset=\dimen117
+\Gm@wd@mp=\dimen118
+\Gm@odd@mp=\dimen119
+\Gm@even@mp=\dimen120
+\Gm@layoutwidth=\dimen121
+\Gm@layoutheight=\dimen122
+\Gm@layouthoffset=\dimen123
+\Gm@layoutvoffset=\dimen124
+\Gm@dimlist=\toks24
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2016/10/09 v1.0u Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\graphics.cfg"
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-def\pdftex.def"
+File: pdftex.def 2017/01/12 v0.06k Graphics/color for pdfTeX
+\Gread@gobject=\count104
+))
+\Gin@req@height=\dimen125
+\Gin@req@width=\dimen126
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\inputenc.sty"
+Package: inputenc 2015/03/17 v1.2c Input encoding file
+\inpenc@prehook=\toks25
+\inpenc@posthook=\toks26
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\ucs\utf8x.def"
+File: utf8x.def 2004/10/17 UCS: Input encoding UTF-8
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\ucs\ucs.sty"
+Package: ucs 2013/05/11 v2.2 UCS: Unicode input support
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\ucs\uni-global.def"
+File: uni-global.def 2013/05/13 UCS: Unicode global data
+)
+\uc@secondtry=\count105
+\uc@combtoks=\toks27
+\uc@combtoksb=\toks28
+\uc@temptokena=\toks29
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\lm\lmodern.sty"
+Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/lmm/m/it on input line 23.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/lmsy/m/n on input line 24.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 25.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 26.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/lmm/b/it on input line 27.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/lmsy/b/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 31.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 32.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/lmr/m/it on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 36.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\setspace\setspace.sty"
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\tabularx.sty"
+Package: tabularx 2016/02/03 v2.11 `tabularx' package (DPC)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\array.sty"
+Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
+\col@sep=\dimen127
+\extrarowheight=\dimen128
+\NC@list=\toks30
+\extratabsurround=\skip56
+\backup@length=\skip57
+)
+\TX@col@width=\dimen129
+\TX@old@table=\dimen130
+\TX@old@col=\dimen131
+\TX@target=\dimen132
+\TX@delta=\dimen133
+\TX@cols=\count106
+\TX@ftn=\toks31
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\textcomp.sty"
+Package: textcomp 2017/01/24 v2.0c Standard LaTeX package
+Package textcomp Info: Sub-encoding information:
+(textcomp)               5 = only ISO-Adobe without \textcurrency
+(textcomp)               4 = 5 + \texteuro
+(textcomp)               3 = 4 + \textohm
+(textcomp)               2 = 3 + \textestimated + \textcurrency
+(textcomp)               1 = TS1 - \textcircled - \t
+(textcomp)               0 = TS1 (full)
+(textcomp)             Font families with sub-encoding setting implement
+(textcomp)             only a restricted character set as indicated.
+(textcomp)             Family '?' is the default used for unknown fonts.
+(textcomp)             See the documentation for details.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 79.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1enc.def"
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+)
+LaTeX Info: Redefining \oldstylenums on input line 334.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 349.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 350.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 351.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 352.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 353.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 354.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 355.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 356.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 357.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 358.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 359.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 360.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 361.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 362.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 363.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 364.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 365.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 366.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 367.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 368.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 369.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 370.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 371.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 372.
+
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 373.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 374.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 375.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 376.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 377.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 378.
+Package textcomp Info: Setting lmr sub-encoding to TS1/0 on input line 379.
+Package textcomp Info: Setting lmdh sub-encoding to TS1/0 on input line 380.
+Package textcomp Info: Setting lmss sub-encoding to TS1/0 on input line 381.
+Package textcomp Info: Setting lmssq sub-encoding to TS1/0 on input line 382.
+Package textcomp Info: Setting lmvtt sub-encoding to TS1/0 on input line 383.
+Package textcomp Info: Setting lmtt sub-encoding to TS1/0 on input line 384.
+Package textcomp Info: Setting qhv sub-encoding to TS1/0 on input line 385.
+Package textcomp Info: Setting qag sub-encoding to TS1/0 on input line 386.
+Package textcomp Info: Setting qbk sub-encoding to TS1/0 on input line 387.
+Package textcomp Info: Setting qcr sub-encoding to TS1/0 on input line 388.
+Package textcomp Info: Setting qcs sub-encoding to TS1/0 on input line 389.
+Package textcomp Info: Setting qpl sub-encoding to TS1/0 on input line 390.
+Package textcomp Info: Setting qtm sub-encoding to TS1/0 on input line 391.
+Package textcomp Info: Setting qzc sub-encoding to TS1/0 on input line 392.
+Package textcomp Info: Setting qhvc sub-encoding to TS1/0 on input line 393.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 394.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 395.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 396.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 397.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 398.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 399.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 400.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 401.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 402.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 403.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 404.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 405.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 406.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\threeparttable\threeparttable.sty"
+Package: threeparttable 2003/06/13  v 3.0
+\@tempboxb=\box29
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\titlesec\titlesec.sty"
+Package: titlesec 2016/03/21 v2.10.2 Sectioning titles
+\ttl@box=\box30
+\beforetitleunit=\skip58
+\aftertitleunit=\skip59
+\ttl@plus=\dimen134
+\ttl@minus=\dimen135
+\ttl@toksa=\toks32
+\titlewidth=\dimen136
+\titlewidthlast=\dimen137
+\titlewidthfirst=\dimen138
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\wrapfig\wrapfig.sty"
+\wrapoverhang=\dimen139
+\WF@size=\dimen140
+\c@WF@wrappedlines=\count107
+\WF@box=\box31
+\WF@everypar=\toks33
+Package: wrapfig 2003/01/31  v 3.6
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\outlines\outlines.sty"
+Package: outlines 2012/1/23 1.1 Ch. Pecheur
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\adjustbox\adjustbox.sty"
+Package: adjustbox 2012/05/21 v1.0 Adjusting TeX boxes (trim, clip, ...)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\xkeyval\xkeyval.sty"
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\xkeyval\xkeyval.tex"
+("C:\Program Files\MiKTeX 2.9\tex\generic\xkeyval\xkvutils.tex"
+\XKV@toks=\toks34
+\XKV@tempa@toks=\toks35
+)
+\XKV@depth=\count108
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\adjustbox\adjcalc.sty"
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
+-ends (calc, etex, pgfmath)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\adjustbox\trimclip.sty"
+Package: trimclip 2012/05/16 v1.0 Trim and clip general TeX material
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\collectbox\collectbox.sty"
+Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
+\collectedbox=\box32
+)
+\tc@llx=\dimen141
+\tc@lly=\dimen142
+\tc@urx=\dimen143
+\tc@ury=\dimen144
+Package trimclip Info: Using driver 'tc-pdftex.def'.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\adjustbox\tc-pdftex.def"
+File: tc-pdftex.def 2012/05/13 v1.0 Clipping driver for pdftex
+))
+\adjbox@Width=\dimen145
+\adjbox@Height=\dimen146
+\adjbox@Depth=\dimen147
+\adjbox@Totalheight=\dimen148
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\ifoddpage\ifoddpage.sty"
+Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
+\c@checkoddpage=\count109
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\ltxmisc\varwidth.sty"
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box33
+\sift@deathcycles=\count110
+\@vwid@loff=\dimen149
+\@vwid@roff=\dimen150
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\wasysym\wasysym.sty"
+Package: wasysym 2003/10/30 v2.0 Wasy-2 symbol support package
+\symwasy=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `wasy' in version `bold'
+(Font)                  U/wasy/m/n --> U/wasy/b/n on input line 90.
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\was\gensymb.sty"
+Package: gensymb 2003/07/02 v1.0 (WaS)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\afterpage.sty"
+Package: afterpage 2014/10/28 v1.08 After-Page Package (DPC)
+\AP@output=\toks36
+\AP@partial=\box34
+\AP@footins=\box35
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\float\float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count111
+\float@exts=\toks37
+\float@box=\box36
+\@float@everytoks=\toks38
+\@floatcapt=\box37
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\caption\subcaption.sty"
+Package: subcaption 2016/05/22 v1.1-161 Sub-captions (AR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption.sty"
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption3.sty"
+Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
+\captionmargin=\dimen151
+\captionmargin@=\dimen152
+\captionwidth=\dimen153
+\caption@tempdima=\dimen154
+\caption@indent=\dimen155
+\caption@parindent=\dimen156
+\caption@hangindent=\dimen157
+)
+\c@ContinuedFloat=\count112
+Package caption Info: float package is loaded.
+Package caption Info: threeparttable package is loaded.
+Package caption Info: wrapfig package is loaded.
+)
+\c@subfigure=\count113
+\c@subtable=\count114
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\soul\soul.sty"
+Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
+\SOUL@word=\toks39
+\SOUL@lasttoken=\toks40
+\SOUL@cmds=\toks41
+\SOUL@buffer=\toks42
+\SOUL@token=\toks43
+\SOUL@spaceskip=\skip60
+\SOUL@ttwidth=\dimen158
+\SOUL@uldp=\dimen159
+\SOUL@ulht=\dimen160
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\color.sty"
+Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\color.cfg"
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 147.
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.sty"
+\lst@mode=\count115
+\lst@gtempboxa=\box38
+\lst@token=\toks44
+\lst@length=\count116
+\lst@currlwidth=\dimen161
+\lst@column=\count117
+\lst@pos=\count118
+\lst@lostspace=\dimen162
+\lst@width=\dimen163
+\lst@newlines=\count119
+\lst@lineno=\count120
+\lst@maxwidth=\dimen164
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count121
+\lst@skipnumbers=\count122
+\lst@framebox=\box39
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.cfg"
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+))
+(20180518_AO_design_report.aux)
+\openout1 = `20180518_AO_design_report.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 5.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 5.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
+File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 5.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\lm\ot1lmr.fd"
+File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(71.13188pt, 460.93457pt, 65.44142pt)
+* v-part:(T,H,B)=(71.13188pt, 702.78308pt, 71.13188pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=460.93457pt
+* \textheight=590.0pt
+* \oddsidemargin=-1.1381pt
+* \evensidemargin=-1.1381pt
+* \topmargin=-38.1381pt
+* \headheight=130.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=1.0pt
+* \marginparwidth=35.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count123
+\scratchdimen=\dimen165
+\scratchbox=\box40
+\nofMPsegments=\count124
+\nofMParguments=\count125
+\everyMPshowfont=\toks45
+\MPscratchCnt=\count126
+\MPscratchDim=\dimen166
+\MPnumerator=\count127
+\makeMPintoPDFobject=\count128
+\everyMPtoPDFconversion=\toks46
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\ucs\ucsencs.def"
+File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
+)
+\symgns@font=\mathgroup7
+LaTeX Font Info:    Overwriting symbol font `gns@font' in version `bold'
+(Font)                  TS1/lmr/m/n --> TS1/lmr/bx/n on input line 5.
+Package gensymb Info: Math companion symbols declared on input line 5.
+LaTeX Info: Redefining \degree on input line 5.
+LaTeX Info: Redefining \celsius on input line 5.
+Package gensymb Info: Using text companion symbols for \degree, \celsius and \p
+erthousand on input line 5.
+LaTeX Info: Redefining \ohm on input line 5.
+Package gensymb Info: Using \textohm for \ohm on input line 5.
+Package gensymb Info: Using \textmu for \micro on input line 5.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: listings package is loaded.
+Package caption Info: End \AtBeginDocument code.
+\c@lstlisting=\count129
+ (def/pagetitle.tex
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 19.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omllmm.fd"
+File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 19.
+
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omslmsy.fd"
+File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 19.
+
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omxlmex.fd"
+File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 19.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 19.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 19.
+LaTeX Font Info:    Try loading font information for U+msa on input line 19.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 19.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Try loading font information for U+wasy on input line 19.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\wasysym\uwasy.fd"
+File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
+)
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 19.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\lm\ts1lmr.fd"
+File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+<def/signatureAudreyBouxin.PNG, id=1, 1206.00563pt x 587.94656pt>
+File: def/signatureAudreyBouxin.PNG Graphic file (type png)
+
+<use def/signatureAudreyBouxin.PNG>
+Package pdftex.def Info: def/signatureAudreyBouxin.PNG used on input line 22.
+(pdftex.def)             Requested size: 92.17632pt x 42.6766pt.
+
+Overfull \hbox (6.82724pt too wide) in paragraph at lines 21--24
+[]|$[]$| 
+ []
+
+<def/signatureLaurentAutographe.jpg, id=3, 344.28625pt x 262.9825pt>
+File: def/signatureLaurentAutographe.jpg Graphic file (type jpg)
+
+<use def/signatureLaurentAutographe.jpg>
+Package pdftex.def Info: def/signatureLaurentAutographe.jpg used on input line 
+25.
+(pdftex.def)             Requested size: 92.18628pt x 42.67595pt.
+
+Overfull \hbox (6.82724pt too wide) in paragraph at lines 24--27
+[]|$[]$| 
+ []
+
+<def/signature.PNG, id=4, 252.945pt x 79.79813pt>
+File: def/signature.PNG Graphic file (type png)
+ <use def/signature.PNG>
+Package pdftex.def Info: def/signature.PNG used on input line 29.
+(pdftex.def)             Requested size: 92.18713pt x 42.67877pt.
+
+Overfull \hbox (6.82724pt too wide) in paragraph at lines 28--31
+[]|$[]$| 
+ []
+
+<def/ISIK_OPAM.png, id=5, 3232.57687pt x 789.70032pt>
+File: def/ISIK_OPAM.png Graphic file (type png)
+ <use def/ISIK_OPAM.png>
+Package pdftex.def Info: def/ISIK_OPAM.png used on input line 38.
+(pdftex.def)             Requested size: 460.93457pt x 112.5937pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (130.0pt): 
+ Make it at least 131.44374pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+<def/footpage.png, id=6, 1231.60126pt x 76.03406pt>
+File: def/footpage.png Graphic file (type png)
+ <use def/footpage.png>
+Package pdftex.def Info: def/footpage.png used on input line 38.
+(pdftex.def)             Requested size: 460.93457pt x 28.45584pt.
+
+[1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
+
+ <./def/ISIK_OPAM.png
+
+pdfTeX warning: pdflatex (file ./def/ISIK_OPAM.png): large interlaced PNG might
+ cause out of memory (use non-interlaced PNG to fix this)
+> <./def/signatureAudreyBouxin.PNG> <./def/signatureLaurentAutographe.jpg> <./d
+ef/signature.PNG> <./def/footpage.png>]
+Overfull \hbox (142.46892pt too wide) in paragraph at lines 42--47
+ [] 
+ []
+
+File: def/ISIK_OPAM.png Graphic file (type png)
+<use def/ISIK_OPAM.png>
+Package pdftex.def Info: def/ISIK_OPAM.png used on input line 48.
+(pdftex.def)             Requested size: 460.93457pt x 112.5937pt.
+File: def/footpage.png Graphic file (type png)
+ <use def/footpage.png>
+Package pdftex.def Info: def/footpage.png used on input line 48.
+(pdftex.def)             Requested size: 460.93457pt x 28.45584pt.
+ [2])
+Underfull \hbox (badness 10000) in paragraph at lines 21--22
+[]|\OT1/lmr/m/n/12 Dogu Anadolu Go-zle-mevi
+ []
+
+
+Overfull \hbox (2.32643pt too wide) in paragraph at lines 25--25
+[]|\OT1/lmr/m/n/12 FWHM| 
+ []
+
+
+Underfull \hbox (badness 1014) in paragraph at lines 26--27
+[]|\OT1/lmr/m/n/12 Non Com-mon Path Aber-ra-
+ []
+
+
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 14--48
+$[]$ $[]$ 
+ []
+
+File: def/ISIK_OPAM.png Graphic file (type png)
+<use def/ISIK_OPAM.png>
+Package pdftex.def Info: def/ISIK_OPAM.png used on input line 48.
+(pdftex.def)             Requested size: 460.93457pt x 112.5937pt.
+File: def/footpage.png Graphic file (type png)
+ <use def/footpage.png>
+Package pdftex.def Info: def/footpage.png used on input line 48.
+(pdftex.def)             Requested size: 460.93457pt x 28.45584pt.
+ [3]
+Underfull \hbox (badness 10000) in paragraph at lines 66--68
+
+ []
+
+File: def/ISIK_OPAM.png Graphic file (type png)
+<use def/ISIK_OPAM.png>
+Package pdftex.def Info: def/ISIK_OPAM.png used on input line 76.
+(pdftex.def)             Requested size: 460.93457pt x 112.5937pt.
+File: def/footpage.png Graphic file (type png)
+ <use def/footpage.png>
+Package pdftex.def Info: def/footpage.png used on input line 76.
+(pdftex.def)             Requested size: 460.93457pt x 28.45584pt.
+
+
+Package Fancyhdr Warning: \footskip is too small (1.0pt): 
+ Make it at least 10.14995pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[4] <images/Zemax_model_telescope.PNG, id=29, 989.19562pt x 575.14874pt>
+File: images/Zemax_model_telescope.PNG Graphic file (type png)
+
+<use images/Zemax_model_telescope.PNG>
+Package pdftex.def Info: images/Zemax_model_telescope.PNG used on input line 80
+.
+(pdftex.def)             Requested size: 460.93457pt x 268.00307pt.
+File: def/ISIK_OPAM.png Graphic file (type png)
+ <use def/ISIK_OPAM.png>
+Package pdftex.def Info: def/ISIK_OPAM.png used on input line 85.
+(pdftex.def)             Requested size: 460.93457pt x 112.5937pt.
+File: def/footpage.png Graphic file (type png)
+
+<use def/footpage.png>
+Package pdftex.def Info: def/footpage.png used on input line 85.
+(pdftex.def)             Requested size: 460.93457pt x 28.45584pt.
+ [5 <./images/Zemax_model_telescope.PNG>]
+<images/OAP0_DM_diam_beam_diam.PNG, id=34, 545.03625pt x 532.23843pt>
+File: images/OAP0_DM_diam_beam_diam.PNG Graphic file (type png)
+
+<use images/OAP0_DM_diam_beam_diam.PNG>
+Package pdftex.def Info: images/OAP0_DM_diam_beam_diam.PNG used on input line 1
+01.
+(pdftex.def)             Requested size: 138.28177pt x 135.03275pt.
+File: def/ISIK_OPAM.png Graphic file (type png)
+ <use def/ISIK_OPAM.png>
+Package pdftex.def Info: def/ISIK_OPAM.png used on input line 108.
+(pdftex.def)             Requested size: 460.93457pt x 112.5937pt.
+File: def/footpage.png Graphic file (type png)
+
+<use def/footpage.png>
+Package pdftex.def Info: def/footpage.png used on input line 108.
+(pdftex.def)             Requested size: 460.93457pt x 28.45584pt.
+ [6 <./images/OAP0_DM_diam_beam_diam.PNG>]
+<images/sketch_ray_tracing_OAP0.PNG, id=43, 994.46532pt x 554.07pt>
+File: images/sketch_ray_tracing_OAP0.PNG Graphic file (type png)
+
+<use images/sketch_ray_tracing_OAP0.PNG>
+Package pdftex.def Info: images/sketch_ray_tracing_OAP0.PNG used on input line 
+114.
+(pdftex.def)             Requested size: 368.74905pt x 205.45078pt.
+File: def/ISIK_OPAM.png Graphic file (type png)
+ <use def/ISIK_OPAM.png>
+Package pdftex.def Info: def/ISIK_OPAM.png used on input line 129.
+(pdftex.def)             Requested size: 460.93457pt x 112.5937pt.
+File: def/footpage.png Graphic file (type png)
+
+<use def/footpage.png>
+Package pdftex.def Info: def/footpage.png used on input line 129.
+(pdftex.def)             Requested size: 460.93457pt x 28.45584pt.
+ [7 <./images/sketch_ray_tracing_OAP0.PNG>]
+Underfull \hbox (badness 10000) in paragraph at lines 137--138
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 142--143
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 154--156
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 160--162
+
+ []
+
+<images/FCL_space_OAP0.PNG, id=49, 962.09438pt x 558.58687pt>
+File: images/FCL_space_OAP0.PNG Graphic file (type png)
+
+<use images/FCL_space_OAP0.PNG>
+Package pdftex.def Info: images/FCL_space_OAP0.PNG used on input line 166.
+(pdftex.def)             Requested size: 414.83829pt x 240.8525pt.
+File: def/ISIK_OPAM.png Graphic file (type png)
+ <use def/ISIK_OPAM.png>
+Package pdftex.def Info: def/ISIK_OPAM.png used on input line 169.
+(pdftex.def)             Requested size: 460.93457pt x 112.5937pt.
+File: def/footpage.png Graphic file (type png)
+ <use def/footpage.png>
+Package pdftex.def Info: def/footpage.png used on input line 169.
+(pdftex.def)             Requested size: 460.93457pt x 28.45584pt.
+
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 171--172
+
+ []
+
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 174.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 174.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 174.
+File: def/ISIK_OPAM.png Graphic file (type png)
+<use def/ISIK_OPAM.png>
+Package pdftex.def Info: def/ISIK_OPAM.png used on input line 179.
+(pdftex.def)             Requested size: 460.93457pt x 112.5937pt.
+File: def/footpage.png Graphic file (type png)
+ <use def/footpage.png>
+Package pdftex.def Info: def/footpage.png used on input line 179.
+(pdftex.def)             Requested size: 460.93457pt x 28.45584pt.
+ [9 <./images/FCL_space_OAP0.PNG>] <images/DM_pupil_tilt.PNG, id=60, 520.19344p
+t x 337.26pt>
+File: images/DM_pupil_tilt.PNG Graphic file (type png)
+
+<use images/DM_pupil_tilt.PNG>
+Package pdftex.def Info: images/DM_pupil_tilt.PNG used on input line 190.
+(pdftex.def)             Requested size: 322.65279pt x 209.18652pt.
+File: def/ISIK_OPAM.png Graphic file (type png)
+ <use def/ISIK_OPAM.png>
+Package pdftex.def Info: def/ISIK_OPAM.png used on input line 195.
+(pdftex.def)             Requested size: 460.93457pt x 112.5937pt.
+File: def/footpage.png Graphic file (type png)
+ <use def/footpage.png>
+Package pdftex.def Info: def/footpage.png used on input line 195.
+(pdftex.def)             Requested size: 460.93457pt x 28.45584pt.
+
+[10 <./images/DM_pupil_tilt.PNG>]
+<images/FP_OAP0.PNG, id=65, 531.48563pt x 323.70938pt>
+File: images/FP_OAP0.PNG Graphic file (type png)
+
+<use images/FP_OAP0.PNG>
+Package pdftex.def Info: images/FP_OAP0.PNG used on input line 200.
+(pdftex.def)             Requested size: 207.41914pt x 126.33505pt.
+
+<images/DM_beam_footprint.PNG, id=66, 503.63156pt x 380.17032pt>
+File: images/DM_beam_footprint.PNG Graphic file (type png)
+
+<use images/DM_beam_footprint.PNG>
+Package pdftex.def Info: images/DM_beam_footprint.PNG used on input line 206.
+(pdftex.def)             Requested size: 207.41914pt x 156.57274pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 218--220
+
+ []
+
+<images/Zemax_model_FP_OAP1.PNG, id=67, 1034.36438pt x 497.60907pt>
+File: images/Zemax_model_FP_OAP1.PNG Graphic file (type png)
+
+<use images/Zemax_model_FP_OAP1.PNG>
+Package pdftex.def Info: images/Zemax_model_FP_OAP1.PNG used on input line 223.
+
+(pdftex.def)             Requested size: 460.93457pt x 221.74284pt.
+File: def/ISIK_OPAM.png Graphic file (type png)
+ <use def/ISIK_OPAM.png>
+Package pdftex.def Info: def/ISIK_OPAM.png used on input line 227.
+(pdftex.def)             Requested size: 460.93457pt x 112.5937pt.
+File: def/footpage.png Graphic file (type png)
+
+<use def/footpage.png>
+Package pdftex.def Info: def/footpage.png used on input line 227.
+(pdftex.def)             Requested size: 460.93457pt x 28.45584pt.
+ [11 <./images/FP_OAP0.PNG> <./images/DM_beam_footprint.PNG>]
+Underfull \hbox (badness 10000) in paragraph at lines 227--229
+
+ []
+
+<images/FP_2_intFP_FoldMirror.PNG, id=73, 1168.365pt x 554.07pt>
+File: images/FP_2_intFP_FoldMirror.PNG Graphic file (type png)
+
+<use images/FP_2_intFP_FoldMirror.PNG>
+Package pdftex.def Info: images/FP_2_intFP_FoldMirror.PNG used on input line 23
+4.
+(pdftex.def)             Requested size: 460.93457pt x 218.58893pt.
+File: def/ISIK_OPAM.png Graphic file (type png)
+ <use def/ISIK_OPAM.png>
+Package pdftex.def Info: def/ISIK_OPAM.png used on input line 238.
+(pdftex.def)             Requested size: 460.93457pt x 112.5937pt.
+File: def/footpage.png Graphic file (type png)
+
+<use def/footpage.png>
+Package pdftex.def Info: def/footpage.png used on input line 238.
+(pdftex.def)             Requested size: 460.93457pt x 28.45584pt.
+ [12 <./images/Zemax_model_FP_OAP1.PNG>]
+Underfull \hbox (badness 10000) in paragraph at lines 238--239
+
+ []
+
+<images/IntermediateFP_SpotDiagram.PNG, id=78, 1046.40938pt x 392.96812pt>
+File: images/IntermediateFP_SpotDiagram.PNG Graphic file (type png)
+
+<use images/IntermediateFP_SpotDiagram.PNG>
+Package pdftex.def Info: images/IntermediateFP_SpotDiagram.PNG used on input li
+ne 243.
+(pdftex.def)             Requested size: 368.74905pt x 138.4763pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 240--246
+
+ []
+
+File: def/ISIK_OPAM.png Graphic file (type png)
+<use def/ISIK_OPAM.png>
+Package pdftex.def Info: def/ISIK_OPAM.png used on input line 247.
+(pdftex.def)             Requested size: 460.93457pt x 112.5937pt.
+File: def/footpage.png Graphic file (type png)
+ <use def/footpage.png>
+Package pdftex.def Info: def/footpage.png used on input line 247.
+(pdftex.def)             Requested size: 460.93457pt x 28.45584pt.
+ [13 <./images/FP_2_intFP_FoldMirror.PNG>]
+Overfull \hbox (50.83878pt too wide) in paragraph at lines 249--254
+\OT1/lmr/m/n/12 10 mm in di-am-e-ter and at a rea-son-able dis-tance from FP. [
+]FOR[] [][][]these[] [][][]rea[]-[]sons........................................
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 249--254
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 264--266
+
+ []
+
+File: def/ISIK_OPAM.png Graphic file (type png)
+<use def/ISIK_OPAM.png>
+Package pdftex.def Info: def/ISIK_OPAM.png used on input line 266.
+(pdftex.def)             Requested size: 460.93457pt x 112.5937pt.
+File: def/footpage.png Graphic file (type png)
+ <use def/footpage.png>
+Package pdftex.def Info: def/footpage.png used on input line 266.
+(pdftex.def)             Requested size: 460.93457pt x 28.45584pt.
+ [14 <./images/IntermediateFP_SpotDiagram.PNG>]
+<images/SW_trace_rayons_lens_TTMM.PNG, id=88, 1110.39844pt x 393.72093pt>
+File: images/SW_trace_rayons_lens_TTMM.PNG Graphic file (type png)
+
+<use images/SW_trace_rayons_lens_TTMM.PNG>
+Package pdftex.def Info: images/SW_trace_rayons_lens_TTMM.PNG used on input lin
+e 277.
+(pdftex.def)             Requested size: 414.83829pt x 147.09227pt.
+
+<images/Zemax_model_FP_TTmod_noTilt.PNG, id=89, 1053.1847pt x 593.21625pt>
+File: images/Zemax_model_FP_TTmod_noTilt.PNG Graphic file (type png)
+
+<use images/Zemax_model_FP_TTmod_noTilt.PNG>
+Package pdftex.def Info: images/Zemax_model_FP_TTmod_noTilt.PNG used on input l
+ine 284.
+(pdftex.def)             Requested size: 460.93457pt x 259.63104pt.
+File: def/ISIK_OPAM.png Graphic file (type png)
+ <use def/ISIK_OPAM.png>
+Package pdftex.def Info: def/ISIK_OPAM.png used on input line 287.
+(pdftex.def)             Requested size: 460.93457pt x 112.5937pt.
+File: def/footpage.png Graphic file (type png)
+
+<use def/footpage.png>
+Package pdftex.def Info: def/footpage.png used on input line 287.
+(pdftex.def)             Requested size: 460.93457pt x 28.45584pt.
+ [15 <./images/SW_trace_rayons_lens_TTMM.PNG>]
+Underfull \hbox (badness 10000) in paragraph at lines 288--290
+
+ []
+
+<images/Zemax_model_FP_ApexPyr.PNG, id=94, 1152.55594pt x 514.92375pt>
+File: images/Zemax_model_FP_ApexPyr.PNG Graphic file (type png)
+
+<use images/Zemax_model_FP_ApexPyr.PNG>
+Package pdftex.def Info: images/Zemax_model_FP_ApexPyr.PNG used on input line 2
+94.
+(pdftex.def)             Requested size: 460.93457pt x 205.92656pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 291--297
+
+ []
+
+File: def/ISIK_OPAM.png Graphic file (type png)
+<use def/ISIK_OPAM.png>
+Package pdftex.def Info: def/ISIK_OPAM.png used on input line 297.
+(pdftex.def)             Requested size: 460.93457pt x 112.5937pt.
+File: def/footpage.png Graphic file (type png)
+ <use def/footpage.png>
+Package pdftex.def Info: def/footpage.png used on input line 297.
+(pdftex.def)             Requested size: 460.93457pt x 28.45584pt.
+ [16 <./images/Zemax_model_FP_TTmod_noTilt.PNG>]
+File: def/ISIK_OPAM.png Graphic file (type png)
+ <use def/ISIK_OPAM.png>
+Package pdftex.def Info: def/ISIK_OPAM.png used on input line 311.
+(pdftex.def)             Requested size: 460.93457pt x 112.5937pt.
+File: def/footpage.png Graphic file (type png)
+ <use def/footpage.png>
+Package pdftex.def Info: def/footpage.png used on input line 311.
+(pdftex.def)             Requested size: 460.93457pt x 28.45584pt.
+ [17 <./images/Zemax_model_FP_ApexPyr.PNG>]
+<images/Zemax_model_FP_CCD.PNG, id=104, 1035.11719pt x 535.2497pt>
+File: images/Zemax_model_FP_CCD.PNG Graphic file (type png)
+
+<use images/Zemax_model_FP_CCD.PNG>
+Package pdftex.def Info: images/Zemax_model_FP_CCD.PNG used on input line 324.
+(pdftex.def)             Requested size: 460.93457pt x 238.34462pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 321--327
+
+ []
+
+File: def/ISIK_OPAM.png Graphic file (type png)
+<use def/ISIK_OPAM.png>
+Package pdftex.def Info: def/ISIK_OPAM.png used on input line 331.
+(pdftex.def)             Requested size: 460.93457pt x 112.5937pt.
+File: def/footpage.png Graphic file (type png)
+ <use def/footpage.png>
+Package pdftex.def Info: def/footpage.png used on input line 331.
+(pdftex.def)             Requested size: 460.93457pt x 28.45584pt.
+ [18 <./images/Zemax_model_FP_CCD.PNG>]
+File: def/ISIK_OPAM.png Graphic file (type png)
+ <use def/ISIK_OPAM.png>
+Package pdftex.def Info: def/ISIK_OPAM.png used on input line 331.
+(pdftex.def)             Requested size: 460.93457pt x 112.5937pt.
+File: def/footpage.png Graphic file (type png)
+ <use def/footpage.png>
+Package pdftex.def Info: def/footpage.png used on input line 331.
+(pdftex.def)             Requested size: 460.93457pt x 28.45584pt.
+ [19]
+(20180518_AO_design_report.bbl
+File: def/ISIK_OPAM.png Graphic file (type png)
+ <use def/ISIK_OPAM.png>
+Package pdftex.def Info: def/ISIK_OPAM.png used on input line 63.
+(pdftex.def)             Requested size: 460.93457pt x 112.5937pt.
+File: def/footpage.png Graphic file (type png)
+ <use def/footpage.png>
+Package pdftex.def Info: def/footpage.png used on input line 63.
+(pdftex.def)             Requested size: 460.93457pt x 28.45584pt.
+
+[20]) (appendix/appendixes.tex
+File: def/ISIK_OPAM.png Graphic file (type png)
+ <use def/ISIK_OPAM.png>
+Package pdftex.def Info: def/ISIK_OPAM.png used on input line 2.
+(pdftex.def)             Requested size: 460.93457pt x 112.5937pt.
+File: def/footpage.png Graphic file (type png)
+ <use def/footpage.png>
+Package pdftex.def Info: def/footpage.png used on input line 2.
+(pdftex.def)             Requested size: 460.93457pt x 28.45584pt.
+
+[21] <images/EFL2PFL_sketch.PNG, id=120, 583.42969pt x 537.50812pt>
+File: images/EFL2PFL_sketch.PNG Graphic file (type png)
+
+<use images/EFL2PFL_sketch.PNG>
+Package pdftex.def Info: images/EFL2PFL_sketch.PNG used on input line 16.
+(pdftex.def)             Requested size: 230.46729pt x 212.32568pt.
+File: def/ISIK_OPAM.png Graphic file (type png)
+ <use def/ISIK_OPAM.png>
+Package pdftex.def Info: def/ISIK_OPAM.png used on input line 31.
+(pdftex.def)             Requested size: 460.93457pt x 112.5937pt.
+File: def/footpage.png Graphic file (type png)
+ <use def/footpage.png>
+Package pdftex.def Info: def/footpage.png used on input line 31.
+(pdftex.def)             Requested size: 460.93457pt x 28.45584pt.
+
+[22 <./images/EFL2PFL_sketch.PNG>]
+File: def/ISIK_OPAM.png Graphic file (type png)
+ <use def/ISIK_OPAM.png>
+Package pdftex.def Info: def/ISIK_OPAM.png used on input line 46.
+(pdftex.def)             Requested size: 460.93457pt x 112.5937pt.
+File: def/footpage.png Graphic file (type png)
+
+<use def/footpage.png>
+Package pdftex.def Info: def/footpage.png used on input line 46.
+(pdftex.def)             Requested size: 460.93457pt x 28.45584pt.
+ [23]
+File: def/ISIK_OPAM.png Graphic file (type png)
+ <use def/ISIK_OPAM.png>
+Package pdftex.def Info: def/ISIK_OPAM.png used on input line 73.
+(pdftex.def)             Requested size: 460.93457pt x 112.5937pt.
+File: def/footpage.png Graphic file (type png)
+ <use def/footpage.png>
+Package pdftex.def Info: def/footpage.png used on input line 73.
+(pdftex.def)             Requested size: 460.93457pt x 28.45584pt.
+
+[24]
+Underfull \hbox (badness 10000) in paragraph at lines 76--77
+
+ []
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\ucs\uni-0.def"
+File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
+)
+<images/amiciISO.png, id=131, 1126.96031pt x 721.94719pt>
+File: images/amiciISO.png Graphic file (type png)
+
+<use images/amiciISO.png>
+Package pdftex.def Info: images/amiciISO.png used on input line 83.
+(pdftex.def)             Requested size: 184.371pt x 118.10266pt.
+
+<images/tripletDesignISO.png, id=132, 942.52126pt x 694.09312pt>
+File: images/tripletDesignISO.png Graphic file (type png)
+
+<use images/tripletDesignISO.png>
+Package pdftex.def Info: images/tripletDesignISO.png used on input line 93.
+(pdftex.def)             Requested size: 184.371pt x 135.76596pt.
+File: def/ISIK_OPAM.png Graphic file (type png)
+ <use def/ISIK_OPAM.png>
+Package pdftex.def Info: def/ISIK_OPAM.png used on input line 97.
+(pdftex.def)             Requested size: 460.93457pt x 112.5937pt.
+File: def/footpage.png Graphic file (type png)
+
+<use def/footpage.png>
+Package pdftex.def Info: def/footpage.png used on input line 97.
+(pdftex.def)             Requested size: 460.93457pt x 28.45584pt.
+ [25 <./images/amiciISO.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 98--99
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 100--103
+
+ []
+
+File: def/ISIK_OPAM.png Graphic file (type png)
+<use def/ISIK_OPAM.png>
+Package pdftex.def Info: def/ISIK_OPAM.png used on input line 111.
+(pdftex.def)             Requested size: 460.93457pt x 112.5937pt.
+File: def/footpage.png Graphic file (type png)
+ <use def/footpage.png>
+Package pdftex.def Info: def/footpage.png used on input line 111.
+(pdftex.def)             Requested size: 460.93457pt x 28.45584pt.
+ [26 <./images/tripletDesignISO.png>]
+Overfull \hbox (24.26294pt too wide) in paragraph at lines 124--125
+\OML/lmm/m/it/12 ![] \OT1/lmr/m/n/12 = 295\OML/lmm/m/it/12 :\OT1/lmr/m/n/12 235
+ [\OML/lmm/m/it/12 $\OT1/lmr/m/n/12 m$[]]\OML/lmm/m/it/12 ;   ![] \OT1/lmr/m/n
+/12 = 2\OML/lmm/m/it/12 :\OT1/lmr/m/n/12 6422 [\OML/lmm/m/it/12 $\OT1/lmr/m/n/
+12 m$[]]\OML/lmm/m/it/12 ;   ![] \OT1/lmr/m/n/12 = \OMS/lmsy/m/n/12  \OT1/lmr/m
+/n/12 0\OML/lmm/m/it/12 :\OT1/lmr/m/n/12 032380 [\OML/lmm/m/it/12 $\OT1/lmr/m/
+n/12 m$[]]\OML/lmm/m/it/12 ;   ![] \OT1/lmr/m/n/12 = 0\OML/lmm/m/it/12 :\OT1/lm
+r/m/n/12 004028 [\OML/lmm/m/it/12 $\OT1/lmr/m/n/12 m$[]]$ 
+ []
+
+File: def/ISIK_OPAM.png Graphic file (type png)
+<use def/ISIK_OPAM.png>
+Package pdftex.def Info: def/ISIK_OPAM.png used on input line 138.
+(pdftex.def)             Requested size: 460.93457pt x 112.5937pt.
+File: def/footpage.png Graphic file (type png)
+ <use def/footpage.png>
+Package pdftex.def Info: def/footpage.png used on input line 138.
+(pdftex.def)             Requested size: 460.93457pt x 28.45584pt.
+ [27]
+Underfull \hbox (badness 10000) in paragraph at lines 148--150
+
+ []
+
+
+Overfull \hbox (3.99193pt too wide) in paragraph at lines 150--151
+\OT1/lmr/m/n/12 1\OML/lmm/m/it/12 :\OT1/lmr/m/n/12 9898 \OMS/lmsy/m/n/12  \OT1
+/lmr/m/n/12 10[] [$K*Pa$[]]  \OML/lmm/m/it/12 c\OT1/lmr/m/n/12 1 = \OMS/lmsy/m/
+n/12  \OT1/lmr/m/n/12 2\OML/lmm/m/it/12 :\OT1/lmr/m/n/12 376 \OMS/lmsy/m/n/12 
+ \OT1/lmr/m/n/12 10[] [$Pa$[]]\OML/lmm/m/it/12 ;   d \OT1/lmr/m/n/12 = 1\OML/lm
+m/m/it/12 :\OT1/lmr/m/n/12 83 \OMS/lmsy/m/n/12  \OT1/lmr/m/n/12 10[] [$K$[]$Pa
+$[]]\OML/lmm/m/it/12 ;   e \OT1/lmr/m/n/12 =
+ []
+
+File: def/ISIK_OPAM.png Graphic file (type png)
+<use def/ISIK_OPAM.png>
+Package pdftex.def Info: def/ISIK_OPAM.png used on input line 160.
+(pdftex.def)             Requested size: 460.93457pt x 112.5937pt.
+File: def/footpage.png Graphic file (type png)
+ <use def/footpage.png>
+Package pdftex.def Info: def/footpage.png used on input line 160.
+(pdftex.def)             Requested size: 460.93457pt x 28.45584pt.
+ [28]
+File: def/ISIK_OPAM.png Graphic file (type png)
+ <use def/ISIK_OPAM.png>
+Package pdftex.def Info: def/ISIK_OPAM.png used on input line 198.
+(pdftex.def)             Requested size: 460.93457pt x 112.5937pt.
+File: def/footpage.png Graphic file (type png)
+
+<use def/footpage.png>
+Package pdftex.def Info: def/footpage.png used on input line 198.
+(pdftex.def)             Requested size: 460.93457pt x 28.45584pt.
+ [29]
+Underfull \hbox (badness 10000) in paragraph at lines 220--222
+
+ []
+
+<images/ADCgeometrie.png, id=153, 983.17313pt x 440.39531pt>
+File: images/ADCgeometrie.png Graphic file (type png)
+
+<use images/ADCgeometrie.png>
+Package pdftex.def Info: images/ADCgeometrie.png used on input line 242.
+(pdftex.def)             Requested size: 460.93457pt x 206.46838pt.
+File: def/ISIK_OPAM.png Graphic file (type png)
+ <use def/ISIK_OPAM.png>
+Package pdftex.def Info: def/ISIK_OPAM.png used on input line 245.
+(pdftex.def)             Requested size: 460.93457pt x 112.5937pt.
+File: def/footpage.png Graphic file (type png)
+ <use def/footpage.png>
+Package pdftex.def Info: def/footpage.png used on input line 245.
+(pdftex.def)             Requested size: 460.93457pt x 28.45584pt.
+
+[30]
+Underfull \hbox (badness 10000) in paragraph at lines 252--253
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 254--255
+
+ []
+
+<images/triangleGeo.png, id=157, 534.49687pt x 544.28343pt>
+File: images/triangleGeo.png Graphic file (type png)
+
+<use images/triangleGeo.png>
+Package pdftex.def Info: images/triangleGeo.png used on input line 263.
+(pdftex.def)             Requested size: 138.28177pt x 140.81273pt.
+File: def/ISIK_OPAM.png Graphic file (type png)
+ <use def/ISIK_OPAM.png>
+Package pdftex.def Info: def/ISIK_OPAM.png used on input line 266.
+(pdftex.def)             Requested size: 460.93457pt x 112.5937pt.
+File: def/footpage.png Graphic file (type png)
+ <use def/footpage.png>
+Package pdftex.def Info: def/footpage.png used on input line 266.
+(pdftex.def)             Requested size: 460.93457pt x 28.45584pt.
+
+[31 <./images/ADCgeometrie.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 267--268
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 269--270
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 281--282
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 283--284
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 289--290
+
+ []
+
+File: def/ISIK_OPAM.png Graphic file (type png)
+<use def/ISIK_OPAM.png>
+Package pdftex.def Info: def/ISIK_OPAM.png used on input line 291.
+(pdftex.def)             Requested size: 460.93457pt x 112.5937pt.
+File: def/footpage.png Graphic file (type png)
+ <use def/footpage.png>
+Package pdftex.def Info: def/footpage.png used on input line 291.
+(pdftex.def)             Requested size: 460.93457pt x 28.45584pt.
+ [32 <./images/triangleGeo.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 291--292
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 293--294
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 305--306
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 307--308
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 314--315
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 316--317
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 318--319
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 330--331
+
+ []
+
+File: def/ISIK_OPAM.png Graphic file (type png)
+<use def/ISIK_OPAM.png>
+Package pdftex.def Info: def/ISIK_OPAM.png used on input line 332.
+(pdftex.def)             Requested size: 460.93457pt x 112.5937pt.
+File: def/footpage.png Graphic file (type png)
+ <use def/footpage.png>
+Package pdftex.def Info: def/footpage.png used on input line 332.
+(pdftex.def)             Requested size: 460.93457pt x 28.45584pt.
+ [33]
+Underfull \hbox (badness 10000) in paragraph at lines 332--333
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 334--335
+
+ []
+
+File: def/ISIK_OPAM.png Graphic file (type png)
+<use def/ISIK_OPAM.png>
+Package pdftex.def Info: def/ISIK_OPAM.png used on input line 364.
+(pdftex.def)             Requested size: 460.93457pt x 112.5937pt.
+File: def/footpage.png Graphic file (type png)
+ <use def/footpage.png>
+Package pdftex.def Info: def/footpage.png used on input line 364.
+(pdftex.def)             Requested size: 460.93457pt x 28.45584pt.
+ [34]
+Underfull \hbox (badness 10000) in paragraph at lines 364--366
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 373--374
+
+ []
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+File: def/ISIK_OPAM.png Graphic file (type png)
+
+<use def/ISIK_OPAM.png>
+Package pdftex.def Info: def/ISIK_OPAM.png used on input line 381.
+(pdftex.def)             Requested size: 460.93457pt x 112.5937pt.
+File: def/footpage.png Graphic file (type png)
+ <use def/footpage.png>
+Package pdftex.def Info: def/footpage.png used on input line 381.
+(pdftex.def)             Requested size: 460.93457pt x 28.45584pt.
+ [35] (../DimensionnementOAPs.py
+File: def/ISIK_OPAM.png Graphic file (type png)
+
+<use def/ISIK_OPAM.png>
+Package pdftex.def Info: def/ISIK_OPAM.png used on input line 36.
+(pdftex.def)             Requested size: 460.93457pt x 112.5937pt.
+File: def/footpage.png Graphic file (type png)
+ <use def/footpage.png>
+Package pdftex.def Info: def/footpage.png used on input line 36.
+(pdftex.def)             Requested size: 460.93457pt x 28.45584pt.
+ [36]))
+File: def/ISIK_OPAM.png Graphic file (type png)
+ <use def/ISIK_OPAM.png>
+Package pdftex.def Info: def/ISIK_OPAM.png used on input line 346.
+(pdftex.def)             Requested size: 460.93457pt x 112.5937pt.
+File: def/footpage.png Graphic file (type png)
+
+<use def/footpage.png>
+Package pdftex.def Info: def/footpage.png used on input line 346.
+(pdftex.def)             Requested size: 460.93457pt x 28.45584pt.
+ [37] (20180518_AO_design_report.aux) ) 
+Here is how much of TeX's memory you used:
+ 10074 strings out of 493329
+ 146627 string characters out of 3139040
+ 406099 words of memory out of 3000000
+ 13298 multiletter control sequences out of 15000+200000
+ 59860 words of font info for 68 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 61i,15n,94p,929b,2098s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc/d
+vips/lm/lm-ts1.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.en
+c}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Fil
+es/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/MiKTeX 2.9/fonts/e
+nc/dvips/lm/lm-mathex.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lm
+bx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmex10.pfb><C:/Prog
+ram Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi12.pfb><C:/Program Files/MiKTeX 
+2.9/fonts/type1/public/lm/lmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
+blic/lm/lmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb>
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Program Files/
+MiKTeX 2.9/fonts/type1/public/lm/lmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
+pe1/public/lm/lmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr8.
+pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmri12.pfb><C:/Program F
+iles/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/f
+onts/type1/public/lm/lmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
+lm/lmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/wasy/wasy10.pfb><C
+:/Program Files/MiKTeX 2.9/fonts/type1/public/wasy/wasy8.pfb>
+Output written on 20180518_AO_design_report.pdf (37 pages, 3992505 bytes).
+PDF statistics:
+ 243 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 121 words of extra memory for PDF output out of 10000 (max. 10000000)
+

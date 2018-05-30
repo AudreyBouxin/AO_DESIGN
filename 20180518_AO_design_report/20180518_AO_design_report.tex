@@ -296,8 +296,7 @@ We use the optimization tool to find the best focal plane (distance and radius o
 	\end{center}
 \end{figure}
 
-
-\hl{STOOOOOOOOOOOOOOOOOOPPP}
+\hl{Actually, we could play with the angle of the TT modulation mirror to place the ADC closer to the pupil plane. This would be investigate according to the ADC design.}
 
 
 
@@ -311,9 +310,14 @@ The detector is the Nuvuu EMCCD with 128~pixels and a pixel size of $24~\mu$~m. 
 The pupil has to be images on the camera. The TT mirror (pupil plane) image through the OAP3 is at the infinity. So when we image it through the relay lens the pupil plane arrives at the focal plane of the relay lens. Moreover, in order to get the beam size on the camera, the focal length of the relay lens ($f_{\text{LR}}$, see appendix~\ref{sec:PYR2CCD}) has to be~:
 \begin{eqnarray}
 	f_{\text{LR}} &= &\text{F}\# \times \diameter_{\text{CCD}}\\
-	f_{\text{LR}} &= &60\times 0.792\\
-	f_{\text{LR}} &= &47.52\,\,\text{mm}
+	f_{\text{LR}} &= &60.26\times 0.792\\
+	f_{\text{LR}} &= &47.73\,\,\text{mm}
 \end{eqnarray}
+
+\hl{surface 26 thickness variable : jouer avec cette valeur pour obtenir un diametre de 0.792mm sur la CCD = 0.396mm en rayon\\}
+
+\hl{STOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOPPPPPPPPPPPPPPPPP}
+
 The remaining optics have been implemented in the Zemax model just to have an estimation of the space no optimization has been done (we can already see that the diameter is not precisely of $\diameter_\text{CCD}$).\\
 \begin{figure}[H]
 	\begin{center}
