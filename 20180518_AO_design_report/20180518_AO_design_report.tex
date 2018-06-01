@@ -245,7 +245,7 @@ After redoing the optimization of the intermediate focal plane position and the 
 	\end{center}
 \end{figure}
 
-\subsubsection{Imaging the pupil on the TT modulation mirror}
+\subsubsection{Imaging the pupil on the TT modulation mirror}\label{subsubsec:TTMM}
 \hl{The selection of the star in the FoV is made using an XY stage where all the WFS path would be mounted (as we have a compact WFS path).}
 Now, as the OAP0 and OAP1 are the same, this optical configuration creates an image of the pupil of the same diameter at the same distance from the FP as the entrance pupil.\\ 
 It is so not possible to use it to place the TT modulation mirror which has to be about 10~mm in diameter and at a reasonable distance from FP.
@@ -307,22 +307,27 @@ The detector is the Nuvuu EMCCD with 128~pixels and a pixel size of $24~\mu$~m. 
 	\diameter_{\text{CCD}} &= &22\times 24~\mu\text{m}\times 1.5\\
 	\diameter_{\text{CCD}} &= &0.792\,\,\text{mm}
 \end{eqnarray}
-The pupil has to be images on the camera. The TT mirror (pupil plane) image through the OAP3 is at the infinity. So when we image it through the relay lens the pupil plane arrives at the focal plane of the relay lens. Moreover, in order to get the beam size on the camera, the focal length of the relay lens ($f_{\text{LR}}$, see appendix~\ref{sec:PYR2CCD}) has to be~:
-\begin{eqnarray}
-	f_{\text{LR}} &= &\text{F}\# \times \diameter_{\text{CCD}}\\
-	f_{\text{LR}} &= &60.26\times 0.792\\
-	f_{\text{LR}} &= &47.73\,\,\text{mm}
-\end{eqnarray}
 
-\hl{surface 26 thickness variable : jouer avec cette valeur pour obtenir un diametre de 0.792mm sur la CCD = 0.396mm en rayon\\}
-
-\hl{STOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOPPPPPPPPPPPPPPPPP}
-
-The remaining optics have been implemented in the Zemax model just to have an estimation of the space no optimization has been done (we can already see that the diameter is not precisely of $\diameter_\text{CCD}$).\\
+The pupil has to be images on the camera through a relay lens. The pyramid does not act for the ray tracing and so the optical design, it separates the beam in four images only. We can look for the on-axis rays to dimension the relay lens and its position.\\
+In order to play with the variables and have a direct result of what could be done or not, we used a sketch on the drawing software SolidWorks (figure~\ref{fig:SW_trace_rayons_TTMM_CCD}). Then, when you found something roughly fine we introduced the values in Zemax and optimized the distances in order to find the proper pupil plane and diameter.
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=\textwidth]{images/SW_trace_rayons_TTMM_CCD.PNG}
+		\caption{SolidWorks ray tracing from the TT modulation mirror to the CCD.}\label{fig:SW_trace_rayons_TTMM_CCD}
+	\end{center}
+\end{figure}
+We choose to fix the lens focal length in order to have a feasible lens. Playing with this distance we found that a lens of f~=~60~mm would be our best choice. The distance from the lens to the CCD detector is fixed by the pupil position solver in Zemax. The 
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=\textwidth]{images/Zemax_model_FP_CCD.PNG}
 		\caption{Zemax model of the bench until the CCD camera}\label{fig:Zemax_model_FP_CCD}
+	\end{center}
+\end{figure}
+As said section~\ref{subsubsec:TTMM}, we would like to implement the WFS path on a XY stage to pick up the star in the FoV. The WFS path should be compact enough to place it on a platform not too large. This is the reason why we add a folding mirror before the pyramid apex. We can also think about adding a Z stage to the WFS path in order to realign the pupil when needed. This way we save space and we can consider the WFS path as a shoe box.
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=\textwidth]{images/Zemax_model_FP_CCD_foldMirror.PNG}
+		\caption{Zemax model of the bench until the CCD camera bending the beam}\label{fig:Zemax_model_FP_CCD_foldMirror}
 	\end{center}
 \end{figure}
 
