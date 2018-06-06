@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 
 " Parameters"
 DEG2RAD = np.pi/180;
-theta_OAP0  = 20*DEG2RAD;	#[rad]  pour l'OAP0
+theta_OAP0  = 15*DEG2RAD;	#[rad]  pour l'OAP0
 theta_OAP1 = theta_OAP0;
 theta_OAP2  = 20*DEG2RAD;	#[rad]  pour l'OAP2
 #theta_OAP3  = 10*DEG2RAD;	#[rad]  pour l'OAP3
