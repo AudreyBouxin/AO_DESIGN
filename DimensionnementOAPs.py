@@ -24,7 +24,7 @@ EFL_OAP0 = 2*PFL_OAP0/(1+np.cos(theta_OAP1));
 print('PFL_OAP0 (estim) : ', PFL_OAP0)
 
  
-PFL_OAP0 = 445.0;
+#PFL_OAP0 = 445.0;
 print('PFL_OAP0 : ', PFL_OAP0)
 EFL_OAP0 = 2*PFL_OAP0/(1+np.cos(theta_OAP1))
 print('EFL_OAP0 : ', EFL_OAP0)
