@@ -335,8 +335,22 @@ We choose to fix the lens focal length in order to have a feasible lens. Playing
 The natural guide star selection in the FoV is made using a XYZ stage where the WFS path is mounted. The TT modulation mirror is on a pupil plane so it can modulate the beam around the apex of the pyramid irrespectively of the star position. However, the pyramid has to be placed at the star focus in the FoV. The XY stage allows the NGS selection while the Z axis allows realigning the pupil when needed.
 
 \subsection{The entire design}
+Here is the entire design of the AO system.
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=\textwidth]{images/Entire_Design.PNG}
+		\caption{Zemax model of the entire optical train}\label{fig:Entire_Design}
+	\end{center}
+\end{figure}
 
-
+\subsection{Aberrations}
+The AO optical model on Zemax shows that if the alignment and optical surfaces are ideals we should have a total amount of aberration less than 1 nm (largely dominated by spherical aberrations). However, we know that it is not going to be the case and some tolerance analyses are on process to give a realistic approximation of the system aberrations.
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=\textwidth]{images/WF_aberrations.PNG}
+		\caption{Wavefront and Zernike coefficients at the pyramid apex focal plane.}\label{fig:WF_aberrations}
+	\end{center}
+\end{figure}
 
 \subsection{Atmopsheric Dispersion Compensator (ADC)}\label{subsec:ADC}
 We are designing an ADC to compensate the atmospheric dispersion (see appendix\ref{app:ADC}). The geometric parameters and the glass are not set yet this is why we do not have implemented it in the Zemax model for now. However, we can already say that the ADC would probably be inserted between OAP2 and OAP3 because the beam is collimated.
