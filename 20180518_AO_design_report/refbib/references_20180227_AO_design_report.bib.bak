@@ -14,6 +14,273 @@
   url    = {https://www.physikinstrumente.com/en/products/z-tip-tilt-platforms/piezo-platforms/s-335-fast-tiptilt-platform-300711/#c31158},
 }
 
+@Misc{cite:ThorlabsKS2,
+  author = {Thorlabs},
+  title  = {Precision mount 2 inch KS2},
+  year   = {2018},
+  url    = {https://www.thorlabs.com/newgrouppage9.cfm?objectgroup_id=3&pn=KS2#2484},
+}
+
+
+
+@Article{GDD2007,
+  Title                    = {Atmospheric dispersion compensation for extremely large telescopes},
+  Author                   = {Alexander V. Goncharov, Nicholas Devaney, Christopher Dainty},
+  Journal                  = {Optics Express},
+  Year                     = {2007},
+  Number                   = {4},
+  Volume                   = {15},
+
+  Owner                    = {Audrey},
+  Timestamp                = {2015.03.13}
+}
+
+@Article{IRISTMT,
+  author    = {Andrew C. Phillips, Brian J. Baumanb, James E. Larkinc, Anna M. Moored, Cynthia N. Niehausc, David Cramptone, Luc Simard},
+  title     = {The Infrared Imaging Spectrograph (IRIS) for TMT: the atmospheric dispersion corrector},
+  journal   = {SPIE},
+  year      = {2016},
+  owner     = {Audrey},
+  timestamp = {2015.04.01},
+}
+
+@Article{BSSCGP2008,
+  author    = {Breschia and Schipani and Spirito and Cortecchia and Marra and Perrotta},
+  title     = {The atmospheric dispersion corrector software for the VST},
+  journal   = {Memorie della Societa Astronomica Italiana},
+  year      = {2006},
+  volume    = {9},
+  number    = {436},
+  owner     = {Audrey},
+  timestamp = {2015.03.13},
+}
+
+@Article{WynneWors1986,
+  Title                    = {Atmospheric Dispersion correctors at the Cassegrain focus},
+  Author                   = {C.Wynne, S.P Worsick},
+  Journal                  = {Monthly Notices of the Royal Astronomical Society},
+  Year                     = {1986},
+  Number                   = {220},
+  Pages                    = {657-670},
+
+  Owner                    = {Audrey},
+  Timestamp                = {2015.03.26}
+}
+
+@TechReport{KCG,
+  author      = {Derek Kopon and Laird M. Close and Victor Gasho},
+  title       = {An advanced atmospheric dispersion corrector: the Magellan Visible AO Camera},
+  institution = {University of Arizona},
+  year        = {2012},
+  owner       = {Audrey},
+  timestamp   = {2015.03.13},
+}
+
+@Article{PT2008,
+  Title                    = {Atmospheric Dispersion Corrector for W unit (ADC)},
+  Author                   = {F.Pierrali, A. Tozzi},
+  Journal                  = {Istituto Nazionale di Astrofisica},
+  Year                     = {2008},
+
+  Owner                    = {Audrey},
+  Timestamp                = {2015.03.13}
+}
+
+@Article{KittPeakMayall,
+  author    = {George H. Jacoby and Ming Liang and David Vaughnn and Rich Reed and Taft Armandroff},
+  title     = {A New Wide-Field Corrector for the Kitt Peak Mayall 4-m Telescope},
+  journal   = {SPIE},
+  year      = {1998},
+  owner     = {Audrey},
+  timestamp = {2015.04.01},
+}
+
+@Book{LeMaitre,
+  Title                    = {Astronomical Optics and Elasticity Theory: Active Optics Methods},
+  Author                   = {Gérard René Lemaitre},
+  Editor                   = {Springer Science \& Business Media},
+  Publisher                = {Springer Science \& Business Media, 4 déc. 2008 - pages 87-89},
+  Year                     = {2008},
+
+  Owner                    = {Audrey},
+  Timestamp                = {2015.04.01}
+}
+
+@Article{BG2011,
+  Title                    = {The achromatic design of an atmospheric dispersion corrector for extremely large telescopes},
+  Author                   = {Mehdi Bahrami, Alexander V. Goncharov},
+  Journal                  = {Optics ExpreOptics Express},
+  Year                     = {2011},
+  Number                   = {18},
+
+  Owner                    = {Audrey},
+  Timestamp                = {2015.03.13}
+}
+
+@Article{ORIAOwens,
+  Title                    = {Optical refractive index of air: Dependance on pressure, temperature and composition},
+  Author                   = {James. C. Owens},
+  Journal                  = {Applied optics},
+  Year                     = {1967},
+  Number                   = {1},
+  Volume                   = {6},
+
+  Owner                    = {Audrey},
+  Timestamp                = {2015.06.03}
+}
+
+@TechReport{Philipps2003,
+  author      = {Andrew Philipps},
+  title       = {Cassegrain ADC: Optical Design Report},
+  institution = {UCO/Lick Observatory},
+  year        = {2003},
+  owner       = {Audrey},
+  timestamp   = {2015.03.13},
+}
+
+@PhdThesis{JLPHDR,
+  author    = {Jean-Louis Prieur},
+  title     = {Contribution en signal, image et instrumentation pour l'astronomie},
+  school    = {Université Paul Sabatier (Toulouse)},
+  year      = {2015},
+  owner     = {audrey.bouxin},
+  timestamp = {2015.06.03},
+}
+
+@TechReport{PISCO,
+  author      = {Antony A. Stark},
+  title       = {Notes on the Design of the PISCO ADC},
+  institution = {Smithsonian Astrophysical Observatory, 60 Garden St., Cambridge},
+  year        = {2017},
+  journal     = {Smithsonian Astrophysical Observatory, 60 Garden St., Cambridge, MA 02138},
+  owner       = {Audrey},
+  timestamp   = {2015.04.01},
+}
+
+@PhdThesis{Tendulkar,
+  author    = {Shriharsh Tendulkar},
+  title     = {Beyond the Blur: Construction and Characterization of the First Autonomous AO System and an AOs urvey of Magnetar Proper Motion},
+  school    = {California Institute of Technology (Pasadena)},
+  year      = {2014},
+  editor    = {Universal-Publishers, 4 juin 2014 - pages 27-46},
+  owner     = {Audrey},
+  timestamp = {2015.04.01},
+}
+
+@Article{Wynne1996,
+  Title                    = {Correction of atmospheric dispersion in the infrared},
+  Author                   = {C. Wynne},
+  Journal                  = {Monthly Notices of the Royal Astronomical Society},
+  Year                     = {1996},
+  Number                   = {282},
+  Pages                    = {863-867},
+
+  Owner                    = {Audrey},
+  Timestamp                = {2015.03.13}
+}
+
+@Article{Wynne1996VLT,
+  Title                    = {Atmospheric dispersion in very large telescopes with adaptative optics},
+  Author                   = {C. Wynne},
+  Journal                  = {Monthly Notices of the Royal Astronomical Society},
+  Year                     = {1996},
+  Number                   = {285},
+  Pages                    = {130-134},
+
+  Owner                    = {Audrey},
+  Timestamp                = {2015.03.13}
+}
+
+@Article{Wynne1992,
+  Title                    = {A new form of atmospheric dispersion corrector},
+  Author                   = {C.G. Wynne},
+  Journal                  = {Monthly Notices of the Royal Astronomical Society},
+  Year                     = {1992},
+  Number                   = {262},
+  Pages                    = {741-748},
+
+  Owner                    = {Audrey},
+  Timestamp                = {2015.03.13}
+}
+
+@Article{Ciddor,
+  author  = {Philip Ciddor},
+  title   = {Refractive index of air: new equations for the visible and near infrared},
+  journal = {Applied Optics},
+  year    = {1996},
+  volume  = {35},
+  number  = {9},
+}
+
+@Misc{wiki_DP,
+  author = {Wikipedia : Variation de la pression atmospherique avec l'altitude},
+  url    = {https://fr.wikipedia.org/wiki/Variation_de_la_pression_atmosph%C3%A9rique_avec_l%27altitude},
+}
+
+@TechReport{Davis1992,
+  author      = {Davis},
+  title       = {Equation for the Determination of the Density of Moist Air (1981/91)},
+  institution = {Metrologia},
+  year        = {1992},
+}
+
+@Misc{airDensityBrisbane,
+  url = {https://www.brisbanehotairballooning.com.au/calculate-air-density/},
+}
+
+@Article{Stone2002,
+  author  = {Ronald C. Stone},
+  title   = {A New Method for Computing Differential Color Refraction},
+  journal = {The Astronomical Society of the Pacific},
+  year    = {2002},
+}
+
+@Article{Stone1996,
+  author  = {Ronald C. Stone},
+  title   = {An Accurate Method for Computing Atmospheric Refraction},
+  journal = {Astronomical Society of the Pacific},
+  year    = {1996},
+}
+
+@Misc{RefIndexInfo,
+  author = {refractiveindex.info},
+  url    = {https://refractiveindex.info/},
+}
+
+@TechReport{SchottSellmeier,
+  author      = {Schott AG},
+  title       = {Refractive index and dispersion -Technical information},
+  institution = {Schott AG},
+  year        = {2018},
+  url         = {http://www.schott.com/d/advanced_optics/02ffdb0d-00a6-408f-84a5-19de56652849/1.1/tie_29_refractive_index_and_dispersion_eng.pdf},
+}
+
+@Misc{NuvuQE,
+  author = {Nuvu cameras},
+  title  = {HNu128AO},
+  year   = {2018},
+  url    = {http://www.nuvucameras.com/products/hnu-camera/},
+}
+
+@Manual{blabla,
+  title        = {Introduction a l optique pour les ingenieurs},
+  author       = {Laurent Jolissaint},
+  organization = {HEIG VD},
+  edition      = {2017},
+}
+
+@Manual{coursOptLJT,
+  title        = {Introduction a loptique pour les ingenieurs},
+  author       = {Laurent Jolissaint},
+  organization = {HEIG VD},
+  year         = {2017},
+}
+
+@Misc{app:Wifi_HUmidDensityAir,
+  author = {Wikipedia},
+  url    = {https://en.wikipedia.org/wiki/Density_of_air},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}
 
 % This file was created with JabRef 2.10.

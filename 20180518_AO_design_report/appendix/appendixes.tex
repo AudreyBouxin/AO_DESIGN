@@ -117,7 +117,7 @@ First, we need to model to atsmophere dispersion (refractive index) depending on
 where the parameters are defined as follow :
 \begin{itemize}
 	\item the wave number\\ $\sigma  = 2\pi/\lambda\,\,[\mu $m$^{^-1}]$
-	\item Constants involved in the standard phase and group refractivities of dry air \cite{Ciddor}\\ $k_0 = 238.0182,\,k_1 = 5792105,\,k_2 = 57.362,\,k_3 = 167917\,\,[\mu $m$^{-2}]$ 
+	\item Constants involved in the standard phase and group refractivities of dry air \cite{Ciddor}\\ $k_0 = 238.0185,\,k_1 = 5792105,\,k_2 = 57.362,\,k_3 = 167917\,\,[\mu $m$^{-2}]$ 
 	\item $n_{as}$ the refractive index of standard air at T=20\degree C, 101325 Pa, 0 \% humidity, 450 ppm of CO$_2$
 	\item for now, I took the concentration of CO$_2$ in the air of x$_c$ = 450 ppm (standard) so equation~\eqref{eq:nasx} becomes $n_{asx} = n_{as}$ but we can change that easily changing the x$_c$ parameter in the code
 	\item $n_{asx}$ the refractive index of $x_c$ ppm of CO$_2$ at T=20\degree C, 101325 Pa, 0 \% humidity
@@ -132,15 +132,18 @@ where the parameters are defined as follow :
 \paragraph*{Calcul of the humid air density}
 \begin{eqnarray}
 	\rho_a &= & \frac{P\,M_a}{Z\,R\,T}\left[1-x_V\left(1-\frac{M_V}{M_a}\right)\right]\label{subsubsec:rho_a}\\
-	P &= & P_0\left(1-\frac{\Delta T\,H}{T}\right)\nonumber\\
+	P &= & P_0\left(1-\frac{\Delta T\,H}{T}\right)^{\frac{g\,M_a}{R\Delta T}}\nonumber\\
 	M_a &= &\left(28.9635+12.011(xCO2-0.0004)\right)\times 10^{^-3}\nonumber\\
 	Z &= &1-\frac{P}{T}\left[a_0+a_1\,t+a_2\,T^2+\left(b_0+b_1\,t\right)*x_v +(c_0+c_1\,t)*x_v^2\right] +\frac{p^2}{T^2}\left(d+e*xv^2\right)\nonumber
 \end{eqnarray}
 with :
 \begin{itemize}
 	\item $P_0 = 1.01325\times 10^5$ [Pa] the normal pressure at altitude 0 m;
+	\item $P$ the pressure at altitude $H$ \cite{app:Wiki_HumidDensityAir};
+	\item $g = 9.80665$ [m/s$^2$] earth-surface gravitational acceleration;
 	\item $\Delta T = 0.0065$ [K] the vertical gradient of temperature (0.65K for 100 m)\cite{wiki_DP}
-	\item $T_0 = -10$ [\degree C] mean temperature from DAG-AWOS1
+	\item $T_0 = 15$ [\degree C] sea level standard temperature
+	\item $T = -10$ [\degree C] mean temperature from DAG-AWOS1
 	\item $H = 3170$[m] Karakaya altitude
 	\item $M_a$ [kg/mol] the density of dry air with $xCO2 = 0.0004$ \cite{Davis1992}
 	\item $M_V = 18.01528\times 10^{-3}$ [kg/mol] the mole mass of water
@@ -154,7 +157,7 @@ with :
 	\end{itemize}	 
 \end{itemize}
 
-\paragraph*{Calcul of density of dry air at standard conditions}
+\paragraph*{Calcul of density of dry air at standard conditions (\cite{app:Wiki_HumidDensityAir}, \cite{airDensityBrisbane})}
 \begin{equation}
 	\rho_{axs} = \frac{P_0}{R_{gas}T_0}\label{subsubsec:rho_axs}
 \end{equation}
