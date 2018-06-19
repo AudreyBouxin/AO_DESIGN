@@ -3,10 +3,10 @@
 This is a function that computes the atmosphere refraction angle at specified wavelengths.
 
  INPUTS :
-   - lambda_wave  [m] Studied wavelengths
+   - lambda_wave  [m] Studied wavelengths (can be an array)
    - zenith_angle [°] Zenith angle of observation
  OUTPUT :
-   - Ratm       [rad] la dispersion angulaire de l'atmosphère
+   - Ratm       [rad] angular dispersion of the atmosphere
    
 Created on Tue Jun 12 09:16:04 2018
 
@@ -193,6 +193,7 @@ def Refraction_atmosphere(lambda_wave, zenith_angle):
     n = n_prop
     gamma = (n-1)   # #(Stone 1996)
     #we can retain only the first two terms of the expanded power serie of R for zenith angles < 75° (Stone 1996)
+    #[rad] angular dispersion of the atmosphere
     Ratm = kappa*gamma*(1-beta)*np.tan(zenith_angle_rad)-kappa*gamma*(beta-gamma/2)*(np.tan(zenith_angle_rad))**3;    
     
     return Ratm
