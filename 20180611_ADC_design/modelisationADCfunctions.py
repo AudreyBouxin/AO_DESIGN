@@ -18,6 +18,7 @@ This is a function that computes the exit angle depending on the entry angle and
 import numpy as np
 from scipy.optimize import fmin_l_bfgs_b
 import pandas as pd
+import matplotlib.pyplot as plt
 
 def exitAngle(entryAngle,n0,nA,nB,thetaA,thetaB):
     
@@ -38,7 +39,7 @@ def exitAngle(entryAngle,n0,nA,nB,thetaA,thetaB):
 """
 Created on Tue Jun 19 14:25:30 2018
 
-This is a function that computes the glass refractive index for the Schott catalog
+This is a function that computes the glass refractive index
 
  INPUTS :
    - lambda_um [um]: the wavelength studied : HAS TO BE  a numerical value NOT ARRAY!
@@ -48,21 +49,29 @@ This is a function that computes the glass refractive index for the Schott catal
 
 @author: audrey.bouxin@heig-vd.ch
 """
-def sellmeierRefractiveIndex_Schott(lambda_um):
-    SellmeierCoefficientsSchott = pd.read_csv('Glasses_catalogs/SellmeierCoeffSchott.csv',header=None,names=['GlassName','B1','C1','B2','C2','B3','C3'])
+def RefractiveIndex(lambda_um):
+    SellmeierCoefficientsSchott = pd.read_csv('Glasses_catalogs/SchottSellmeierCoefficients201703.csv',names=['GlassName','B1','B2', 'B3', 'C1', 'C2', 'C3'])
 #    n = (1 + SellmeierCoefficients.B1*np.power(lambda_um,2)/(np.power(lambda_um,2)-SellmeierCoefficients.C1) 
 #            + SellmeierCoefficients.B2*np.power(lambda_um,2)/(np.power(lambda_um,2)-SellmeierCoefficients.C2) 
 #            + SellmeierCoefficients.B3*np.power(lambda_um,2)/(np.power(lambda_um,2)-SellmeierCoefficients.C3))**0.5;
-    n = ((1 + np.array(SellmeierCoefficientsSchott.B1)*np.power(lambda_um,2)/(np.power(lambda_um,2)-np.array(SellmeierCoefficientsSchott.C1)) 
+    n_schott = ((1 + np.array(SellmeierCoefficientsSchott.B1)*np.power(lambda_um,2)/(np.power(lambda_um,2)-np.array(SellmeierCoefficientsSchott.C1)) 
         + np.array(SellmeierCoefficientsSchott.B2)*np.power(lambda_um,2)/(np.power(lambda_um,2)-np.array(SellmeierCoefficientsSchott.C2)) 
         + np.array(SellmeierCoefficientsSchott.B3)*np.power(lambda_um,2)/(np.power(lambda_um,2)-np.array(SellmeierCoefficientsSchott.C3))))**0.5
-    glassName = SellmeierCoefficientsSchott.GlassName
+    
+    SellmeierCoefficientsOhara = pd.read_csv('Glasses_catalogs/OharaSellmeierCoefficients201805.csv',names=['GlassName','B1','B2', 'B3', 'C1', 'C2', 'C3'])
+    n_ohara = ((1 + np.array(SellmeierCoefficientsOhara.B1)*np.power(lambda_um,2)/(np.power(lambda_um,2)-np.array(SellmeierCoefficientsOhara.C1)) 
+        + np.array(SellmeierCoefficientsOhara.B2)*np.power(lambda_um,2)/(np.power(lambda_um,2)-np.array(SellmeierCoefficientsOhara.C2)) 
+        + np.array(SellmeierCoefficientsOhara.B3)*np.power(lambda_um,2)/(np.power(lambda_um,2)-np.array(SellmeierCoefficientsOhara.C3))))**0.5
+    
+    n = np.concatenate((n_schott, n_ohara),axis=0)
+
+    glassName = np.concatenate((SellmeierCoefficientsSchott.GlassName, SellmeierCoefficientsOhara.GlassName),axis=0)
     return n,glassName
 
 """
-Created on Tue Jun 19 16:30:30 2018
+Created on Tue Jun 20 12:46:32 2018
 
-This is a function that computes the glass refractive index for the Ohara catalog
+This is a function tests the refractive index calculs with the Sellmeier coefficients
 
  INPUTS :
    - lambda_um [um]: the wavelength studied : HAS TO BE  a numerical value NOT ARRAY!
@@ -70,53 +79,31 @@ This is a function that computes the glass refractive index for the Ohara catalo
    - n [-]: the refractive index array for lambda and each glass
    - glassName : the name of each glass in an array
 
-
 @author: audrey.bouxin@heig-vd.ch
 """
-def sellmeierRefractiveIndex_Ohara(lambda_um):
-    DispersionCoefficientsOhara = pd.read_csv('Glasses_catalogs/SellmeierCoeffOhara.csv', header=None,names=['GlassName','A1','A2','A3','A4','A5','A6'])
-    n = (DispersionCoefficientsOhara.A1+DispersionCoefficientsOhara.A2*np.power(lambda_um,2)
-        + DispersionCoefficientsOhara.A3*np.power(lambda_um,-2)
-        + DispersionCoefficientsOhara.A4*np.power(lambda_um,-4)
-        + DispersionCoefficientsOhara.A5*np.power(lambda_um,-6)
-        + DispersionCoefficientsOhara.A6*np.power(lambda_um,-8))**0.5
-    glassName = DispersionCoefficientsOhara.GlassName
-    return n,glassName
-
-# -*- coding: utf-8 -*-
-"""
-This is a function that computes the refractive index with both Ohara and Schott catalogs.
-
- INPUTS :
-   - lambda_wave  [um] Studied wavelengths (can be an array)
- OUTPUT :
-   - n the refractive index for a wavelength
-   
-Created on Tue Jun 20 09:36:50 2018
-
-@author: audrey.bouxin (audrey.bouxin@heig-vd.ch)
- 
- June 2018, ABx Creation 
-"""    
-def RefractiveIndex(lambda_um):
-    n_schott_min,glassNameSchott_min = sellmeierRefractiveIndex_Schott(lambda_um[0])
-    n_schott_cen,glassNameSchott_cen = sellmeierRefractiveIndex_Schott(lambda_um[1])
-    n_schott_max,glassNameSchott_max = sellmeierRefractiveIndex_Schott(lambda_um[2])
+def testRefractiveIndexCalcul():
+    lambda_wave = 1e-9*np.linspace(300,2500,100)
+    lambda_wave_um = lambda_wave*1e6
+    n = np.array([])
+    glassName =  np.array([])
+    for idx in range(np.size(lambda_wave)):
+        n_tmp,glassName = RefractiveIndex(lambda_wave_um[idx])
+        n = np.append(n,n_tmp)
     
-    n_ohara_min,glassNameOhara_min  = sellmeierRefractiveIndex_Ohara(lambda_um[0])
-    n_ohara_cen,glassNameOhara_cen  = sellmeierRefractiveIndex_Ohara(lambda_um[1])
-    n_ohara_max,glassNameOhara_max  = sellmeierRefractiveIndex_Ohara(lambda_um[2])
+    n = n.reshape(np.size(lambda_wave),5)
+    plt.figure()
+    plt.hold(True)
+    for idx in range(5):
+        plt.plot(lambda_wave_um*1e3,n[:,idx],label=glassName[idx])
+    plt.xlabel('\lambda [nm]')
+    plt.ylabel('n')
+    plt.legend()
+    axes = plt.gca()
+    axes.set_xlim([lambda_wave[0]*1e9, lambda_wave[-1]*1e9])
+    axes.set_ylim([1.1,1.9])
+    plt.show()
     
-    n_min = np.concatenate((n_schott_min, n_ohara_min),axis=0)
-    n_cen = np.concatenate((n_schott_cen, n_ohara_cen),axis=0)
-    n_max = np.concatenate((n_schott_max, n_ohara_max),axis=0)
-    
-    glassName = np.concatenate((glassNameSchott_min, glassNameOhara_min),axis=0)
-    
-    GlassN = pd.DataFrame(data={'GlassName' : glassName, 'n_min': n_min,'n_cen': n_cen,'n_max':n_max})
-    return GlassN
-
-
+    return 0
 
 # -*- coding: utf-8 -*-
 """
@@ -138,12 +125,12 @@ Created on Tue Jun 19 09:16:04 2018
 def glassChoiceTable(lambda_wave):
     #Constants
     DEG2RAD = np.pi/180.
-    lambda_wave_um = lambda_wave*1e6            #[um]
+    lambda_um = lambda_wave*1e6            #[um]
 
-    GlassN = RefractiveIndex(lambda_wave_um)
-    n_min = GlassN[:,1]
-    n_cen = GlassN[:,2]
-    n_max = GlassN[:,3]
+    n_min,glassName_min = RefractiveIndex(lambda_um[0])
+    n_cen,glassName_cen = RefractiveIndex(lambda_um[1])
+    n_max,glassName_max = RefractiveIndex(lambda_um[2])
+    GlassName = glassName_min
     
     Ratm = Refraction_atmosphere(lambda_wave, 70)
     entryAngles    = Ratm-Ratm[1]
@@ -170,7 +157,7 @@ def glassChoiceTable(lambda_wave):
     
     for glassA_idx in range(NumberOfGlasses):
         for glassB_idx in range(NumberOfGlasses):
-            print('Num glass A : ',glassA_idx, ' Glass IDs : ', ' A : ',GlassN.GlassName[glassA_idx])#,' B : ',SellmeierCoefficients.GlassName[glassB_idx])
+            print('Num glass A : ',glassA_idx, ' Glass IDs : ', ' A : ',GlassName[glassA_idx])#,' B : ',GlassName[glassB_idx])
             initial_values = np.array([thetaMin, thetaMin])    #glassA_idx, glassB_idx, thetaA, thetaB
             bounds = [(thetaMin,thetaMax),(thetaMin,thetaMax)]
             thetas_final,BDCQ_Final,info = fmin_l_bfgs_b(func=func2min_BDCQ, x0=initial_values, fprime=None, args=(glassA_idx,glassB_idx), approx_grad=True, bounds=bounds, m=10, factr=10000000.0, pgtol=1e-05, epsilon=1e-08, iprint=-1, maxfun=15000, maxiter=15000, disp=None, callback=None, maxls=20)
