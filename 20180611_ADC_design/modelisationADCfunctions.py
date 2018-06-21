@@ -50,7 +50,7 @@ This is a function that computes the glass refractive index
 @author: audrey.bouxin@heig-vd.ch
 """
 def RefractiveIndex(lambda_um):
-    SellmeierCoefficientsSchott = pd.read_csv('Glasses_catalogs/SchottSellmeierCoefficients201703.csv',names=['GlassName','B1','B2', 'B3', 'C1', 'C2', 'C3'])
+    SellmeierCoefficientsSchott = pd.read_csv('Glasses_catalogs/SchottSellmeierCoefficients201703.csv',header=None,names=['GlassName','B1','B2', 'B3', 'C1', 'C2', 'C3'])
 #    n = (1 + SellmeierCoefficients.B1*np.power(lambda_um,2)/(np.power(lambda_um,2)-SellmeierCoefficients.C1) 
 #            + SellmeierCoefficients.B2*np.power(lambda_um,2)/(np.power(lambda_um,2)-SellmeierCoefficients.C2) 
 #            + SellmeierCoefficients.B3*np.power(lambda_um,2)/(np.power(lambda_um,2)-SellmeierCoefficients.C3))**0.5;
@@ -58,7 +58,7 @@ def RefractiveIndex(lambda_um):
         + np.array(SellmeierCoefficientsSchott.B2)*np.power(lambda_um,2)/(np.power(lambda_um,2)-np.array(SellmeierCoefficientsSchott.C2)) 
         + np.array(SellmeierCoefficientsSchott.B3)*np.power(lambda_um,2)/(np.power(lambda_um,2)-np.array(SellmeierCoefficientsSchott.C3))))**0.5
     
-    SellmeierCoefficientsOhara = pd.read_csv('Glasses_catalogs/OharaSellmeierCoefficients201805.csv',names=['GlassName','B1','B2', 'B3', 'C1', 'C2', 'C3'])
+    SellmeierCoefficientsOhara = pd.read_csv('Glasses_catalogs/OharaSellmeierCoefficients201805.csv',header=None,names=['GlassName','B1','B2', 'B3', 'C1', 'C2', 'C3'])
     n_ohara = ((1 + np.array(SellmeierCoefficientsOhara.B1)*np.power(lambda_um,2)/(np.power(lambda_um,2)-np.array(SellmeierCoefficientsOhara.C1)) 
         + np.array(SellmeierCoefficientsOhara.B2)*np.power(lambda_um,2)/(np.power(lambda_um,2)-np.array(SellmeierCoefficientsOhara.C2)) 
         + np.array(SellmeierCoefficientsOhara.B3)*np.power(lambda_um,2)/(np.power(lambda_um,2)-np.array(SellmeierCoefficientsOhara.C3))))**0.5
@@ -73,11 +73,8 @@ Created on Tue Jun 20 12:46:32 2018
 
 This is a function tests the refractive index calculs with the Sellmeier coefficients
 
- INPUTS :
-   - lambda_um [um]: the wavelength studied : HAS TO BE  a numerical value NOT ARRAY!
- OUTPUT :
-   - n [-]: the refractive index array for lambda and each glass
-   - glassName : the name of each glass in an array
+ INPUTS : [-]
+ OUTPUT : [-]
 
 @author: audrey.bouxin@heig-vd.ch
 """
@@ -167,15 +164,32 @@ def glassChoiceTable(lambda_wave):
             
     return NumberOfGlasses,tableResults
    
+# -*- coding: utf-8 -*-
+"""
+This is a function that looks for the Abbe number in the glass properties file
 
+ INPUTS :
+   - lambda_wave  [m] Studied wavelengths (can be an array)
+   - zenith_angle [°] Zenith angle of observation
+ OUTPUT :
+   - Ratm       [rad] angular dispersion of the atmosphere
+   
+Created on Tue Jun 12 09:16:04 2018
 
+@author: audrey.bouxin (audrey.bouxin@heig-vd.ch)
+ 
+ June 2018, ABx Creation 
+"""
 
-
-
-
-
-
-
+def glassPropertiesAbbeCTE3070nD():
+    #glassA_idx  ,glassB_idx,  thetaA_final,  thetaB_final,  BDCQ_Final
+    schottGlassProperties = pd.read_csv('Glasses_catalogs/SchottGlassProperties201703.csv',header=None,names=['VD','alpha3070','alpha20300','nD'])
+    oharaGlassProperties = pd.read_csv('Glasses_catalogs/OharaGlassProperties201703.csv',header=None,names=['VD','alpha3070','alpha100300','nD'])
+    
+    VD = np.concatenate((schottGlassProperties.VD, oharaGlassProperties.VD),axis=0)
+    CTE3070 = np.concatenate((schottGlassProperties.alpha3070*1e-6, oharaGlassProperties.alpha3070*1e-7),axis=0)
+    nD = np.concatenate((schottGlassProperties.nD, oharaGlassProperties.nD),axis=0)
+    return VD,CTE3070,nD
 
 
 
@@ -378,4 +392,27 @@ def Refraction_atmosphere(lambda_wave, zenith_angle):
     
     return Ratm
 
- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
