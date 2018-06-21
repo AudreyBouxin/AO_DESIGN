@@ -27,7 +27,7 @@ lambda_wave = np.array([500,600,900])*1e-9  #[m]
 
 
 compute = 'n'
-filenameTableResult = 'tableResults_201806201346'
+filenameTableResult = 'tableResults_201806211033'
 
 if compute.lower() in ['yes','y']:
     NumberOfGlasses,tableResults = glassChoiceTable(lambda_wave)
@@ -64,7 +64,7 @@ if plotSelection in ['plotAll','all']:
     
 elif plotSelection in ['plotSorted']:
 #    glassA_idx  ,glassB_idx,  thetaA_final,  thetaB_final,  BDCQ_Final
-    last = 1
+    last = 10
     
 #    #Plot the prism angles
 #    plt.figure()    

@@ -129,7 +129,7 @@ def glassChoiceTable(lambda_wave):
     n_max,glassName_max = RefractiveIndex(lambda_um[2])
     GlassName = glassName_min
     
-    Ratm = Refraction_atmosphere(lambda_wave, 70)
+    Ratm = Refraction_atmosphere(lambda_wave, 70,standard=0)
     entryAngles    = Ratm-Ratm[1]
     entryAngle_min = entryAngles[0]
     entryAngle_av  = entryAngles[1]
@@ -212,7 +212,7 @@ Created on Tue Jun 12 09:16:04 2018
  June 2018, ABx Creation 
 """
 
-def Refraction_atmosphere(lambda_wave, zenith_angle):
+def Refraction_atmosphere(lambda_wave, zenith_angle, standard):
 
     #constants:
     DEG2RAD = np.pi/180.
@@ -222,16 +222,26 @@ def Refraction_atmosphere(lambda_wave, zenith_angle):
     Mw = 18.01528e-3;    #[kg/mol] (Ciddor 1996)
     R  = 8.314510;       #[J/mol/K] (Davis 1992 & Ciddor 1996)
     
-    #General parameters
-    Height = 0.#3170;       #[m] altitude Karakaya
-    T_C    = 15.#-15;       #[°C] temperature
-    T_K    = T_C + 273.15;  #[K] temperature
-    T0_C   = 15.            #[°C] standard temperature (Robo-AO)
-    T0_K   = T0_C+273.15;   #[K] standard temperature 
-    DT     = 0.0065;        #[K] vertical gradient of temperature 0.65K for 100m (Wikipedia)
-    P0     = 1.01325e5;     #[Pa] Normal pressure at altitude = 0
-    RH     = 0.5;#♣0.8;     #[-] relative humidity       
-    
+    if standard ==1:   
+        #General parameters
+        Height = 0.             #[m] altitude standard
+        T_C    = 15.    ;       #[°C] temperature
+        T_K    = T_C + 273.15;  #[K] temperature
+        T0_C   = 15.            #[°C] standard temperature (Robo-AO)
+        T0_K   = T0_C+273.15;   #[K] standard temperature 
+        DT     = 0.0065;        #[K] vertical gradient of temperature 0.65K for 100m (Wikipedia)
+        P0     = 1.01325e5;     #[Pa] Normal pressure at altitude = 0
+        RH     = 0.5            #[-] relative humidity       
+    else:
+                #General parameters
+        Height = 3170;          #[m] altitude Karakaya
+        T_C    = -15;           #[°C] temperature
+        T_K    = T_C + 273.15;  #[K] temperature
+        T0_C   = 15.            #[°C] standard temperature (Robo-AO)
+        T0_K   = T0_C+273.15;   #[K] standard temperature 
+        DT     = 0.0065;        #[K] vertical gradient of temperature 0.65K for 100m (Wikipedia)
+        P0     = 1.01325e5;     #[Pa] Normal pressure at altitude = 0
+        RH     = 0.8;           #[-] relative humidity     
     
     
     
