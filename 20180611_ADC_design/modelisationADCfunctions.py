@@ -111,6 +111,14 @@ This is a function that computes matrix containing all the glasses combinations 
  OUTPUT :
    - tableResults  the matrix containing the glass combination performance, 
                    the angles giving the best geometrical results for each prims pair and the metric value
+                   
+                   the elements of this table are :
+                       glassA_idx,glassB_idx : the array indices of both glasses
+                       thetaA_final,thetaB_final : the final angles minimizing the BDCQ metric for both angles
+                       BDCQ_Final : the metric to minimize value for each combination of glasses
+                       VD_A,VD_B : Abbe numbers
+                       nD_A,nD_B : refractive index for the D wavelength
+                       CTE3070_A, CTE3070_B : (X10^-6) thermal expansion coefficients
    
 Created on Tue Jun 19 09:16:04 2018
 
@@ -149,19 +157,33 @@ def glassChoiceTable(lambda_wave):
         BDCQ = ((exitAngle_min-exitAngle_av)**2 + (exitAngle_max-exitAngle_av)**2 + (exitAngle_av-entryAngle_av)**2)**.5 #Beam Dispersion Correction Quality metric
         return BDCQ
     
-    NumberOfGlasses=np.size(n_min)
-        
-    
-    for glassA_idx in range(NumberOfGlasses):
-        for glassB_idx in range(NumberOfGlasses):
-            print('Num glass A : ',glassA_idx, ' Glass IDs : ', ' A : ',GlassName[glassA_idx])#,' B : ',GlassName[glassB_idx])
+    NumberOfGlassesTotal=np.size(n_min)
+    VD,CTE3070,nD = glassPropertiesAbbeCTE3070nD()  
+    n_tmp,GlassName = RefractiveIndex(lambda_um[0])
+    NumberOfGlasses = 0
+    for glassA_idx in range(NumberOfGlassesTotal):
+        for glassB_idx in range(NumberOfGlassesTotal):
+            GlassNameA = GlassName[glassA_idx]
+            GlassNameB = GlassName[glassB_idx]
+            print('Num glass A : ',glassA_idx, ' Glass IDs : ', ' A : ',GlassNameA,' B : ',GlassNameB)
             initial_values = np.array([thetaMin, thetaMin])    #glassA_idx, glassB_idx, thetaA, thetaB
             bounds = [(thetaMin,thetaMax),(thetaMin,thetaMax)]
             thetas_final,BDCQ_Final,info = fmin_l_bfgs_b(func=func2min_BDCQ, x0=initial_values, fprime=None, args=(glassA_idx,glassB_idx), approx_grad=True, bounds=bounds, m=10, factr=10000000.0, pgtol=1e-05, epsilon=1e-08, iprint=-1, maxfun=15000, maxiter=15000, disp=None, callback=None, maxls=20)
             thetaA_final = thetas_final[0]#[rad]
             thetaB_final = thetas_final[1]#[rad]
-            tableResults = np.append(tableResults,np.array([glassA_idx,glassB_idx,thetaA_final,thetaB_final,BDCQ_Final]))
+            VD_A = VD[glassA_idx]
+            VD_B = VD[glassB_idx]
+            nD_A = nD[glassA_idx]
+            nD_B = nD[glassB_idx]
+            CTE3070_A = CTE3070[glassA_idx]
+            CTE3070_B = CTE3070[glassB_idx]
+            deltaCTE3070 = np.abs(1e6*(CTE3070_A-CTE3070_B))
             
+            if (deltaCTE3070 < 5.0 and glassA_idx != glassB_idx):
+                tableResults = np.append(tableResults,np.array([glassA_idx,glassB_idx,thetaA_final,thetaB_final,BDCQ_Final,VD_A,VD_B,nD_A,nD_B,CTE3070_A, CTE3070_B,GlassNameA,GlassNameB]))
+                NumberOfGlasses += 1
+            else:
+                print('CTE diff : ', str(round(deltaCTE3070,2)))
     return NumberOfGlasses,tableResults
    
 # -*- coding: utf-8 -*-

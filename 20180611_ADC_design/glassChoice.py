@@ -7,7 +7,7 @@ Created on Wed Jun 13 09:55:36 2018
 
 from modelisationADCfunctions import glassChoiceTable
 from modelisationADCfunctions import RefractiveIndex
-from modelisationADCfunctions import glassPropertiesAbbeCTE3070nD
+#from modelisationADCfunctions import glassPropertiesAbbeCTE3070nD
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -27,7 +27,7 @@ lambda_wave = np.array([500,600,900])*1e-9  #[m]
 
 
 compute = 'n'
-filenameTableResult = 'tableResults_201806211033'
+filenameTableResult = 'tableResults_201806261438'
 
 if compute.lower() in ['yes','y']:
     NumberOfGlasses,tableResults = glassChoiceTable(lambda_wave)
@@ -39,89 +39,117 @@ else:
 
 
 
-tableResults = tableResults.reshape(NumberOfGlasses**2,5)#tableResults.reshape(np.size(n_min)**2,5)
-BDCQ_min_sorted_idx = np.argsort(tableResults[:,4])
-tableResultsSorted = tableResults[BDCQ_min_sorted_idx]#glassA_idx  ,glassB_idx,  thetaA_final,  thetaB_final,  BDCQ_Final
-    
-    
+tableResults = tableResults.reshape(NumberOfGlasses,13)
+# tableResultsSorted arguments
+#     0      ,      1    ,        2     ,        3     ,       4     ,         5    ,        6   ,     7  ,     8  ,       9    ,       10   ,       11     ,      12 
+#glassA_idx  , glassB_idx , thetaA_final,  thetaB_final,   BDCQ_Final,        VD_A  ,       VD_B ,   nD_A ,   nD_B ,   CTE3070_A,   CTE3070_B,    GlassNameA,   GlassNameB
+BDCQ_min_sorted_idx = np.argsort(tableResults[:,4].astype(float))
+tableResultsSorted = tableResults[BDCQ_min_sorted_idx]
+
+
+glassA_idx   = tableResultsSorted[:,0].astype(int)
+glassB_idx   = tableResultsSorted[:,1].astype(int)
+thetaA_final = tableResultsSorted[:,2].astype(float)
+thetaB_final = tableResultsSorted[:,3].astype(float)
+BDCQ_Final   = tableResultsSorted[:,4].astype(float)
+VD_A         = tableResultsSorted[:,5].astype(float)
+VD_B         = tableResultsSorted[:,6].astype(float)
+nD_A         = tableResultsSorted[:,7].astype(float)
+nD_B         = tableResultsSorted[:,8].astype(float)
+CTE3070_A    = tableResultsSorted[:,9].astype(float)
+CTE3070_B    = tableResultsSorted[:,10].astype(float)
+
     
 plotSelection = 'plotSorted'
 
 if plotSelection in ['plotAll','all']:
     """ Now we show the results if the keywork 'plotAll' is entered  """  
-    plt.figure()
-    plt.plot(tableResultsSorted[:,2]/DEG2RAD,'*',label='$\Theta_A$')
-    plt.plot(tableResultsSorted[:,3]/DEG2RAD,'*',label='$\Theta_B$')
+    #Plot the prism angles
+    plt.figure(figsize=(12, 8))
+    plt.plot(thetaA_final/DEG2RAD,'*',label='$\Theta_A$')
+    plt.plot(thetaB_final/DEG2RAD,'*',label='$\Theta_B$')
     plt.ylabel('$\Theta$ [°]')
     plt.legend()
     plt.show()
     
-    plt.figure()
-    plt.plot(tableResultsSorted[:,4],'*',label='BQCD')
-    plt.ylabel('BQCD')
+    #Plot the BDCQ value
+    plt.figure(figsize=(12, 8))
+    plt.plot(BDCQ_Final,'*',label='BDCQ')
+    plt.ylabel('BDCQ')
     plt.legend()
     plt.show()
     
 elif plotSelection in ['plotSorted']:
-#    glassA_idx  ,glassB_idx,  thetaA_final,  thetaB_final,  BDCQ_Final
+# tableResultsSorted arguments
+#     0      ,      1    ,        2     ,        3     ,       4     ,         5    ,        6   ,     7  ,     8  ,       9    ,       10   ,       11     ,      12 
+#glassA_idx  , glassB_idx , thetaA_final,  thetaB_final,   BDCQ_Final,        VD_A  ,       VD_B ,   nD_A ,   nD_B ,   CTE3070_A,   CTE3070_B,    GlassNameA,   GlassNameB
     last = 10
     
 #    #Plot the prism angles
-#    plt.figure()    
-#    plt.plot(tableResultsSorted[0:last,2]/DEG2RAD,'+',label='$\Theta_A$')
-#    plt.plot(tableResultsSorted[0:last,3]/DEG2RAD,'+',label='$\Theta_B$')
+#    plt.figure(figsize=(12, 8))
+#    plt.plot(thetaA_final/DEG2RAD,'*',label='$\Theta_A$')
+#    plt.plot(thetaB_final/DEG2RAD,'*',label='$\Theta_B$')
 #    plt.ylabel('$\Theta$ [°]')
 #    plt.legend()
 #    plt.show()
 #    
 #    #Plot the BDCQ value
-#    plt.figure()
-#    plt.plot(tableResultsSorted[0:last,4],'*',label='BQCD')
-#    plt.ylabel('BQCD')
+#    plt.figure(figsize=(12, 8))
+#    plt.plot(BDCQ_Final,'*',label='BDCQ')
+#    plt.ylabel('BDCQ')
 #    plt.legend()
 #    plt.show()
 
-    VD,CTE3070,nD = glassPropertiesAbbeCTE3070nD()
+
     
     """Plot the refractive index wrt lambda for the best combination of glasse"""
     lambda_um = 1e6*np.linspace(300e-9,2400e-9,100)
-    n_tmp,GlassName = RefractiveIndex(lambda_um[0])
+    
 
+# tableResultsSorted arguments
+#     0      ,      1    ,        2     ,        3     ,       4     ,         5    ,        6   ,     7  ,     8  ,       9    ,       10   ,       11     ,      12 
+#glassA_idx  , glassB_idx , thetaA_final,  thetaB_final,   BDCQ_Final,        VD_A  ,       VD_B ,   nD_A ,   nD_B ,   CTE3070_A,   CTE3070_B,    GlassNameA,   GlassNameB
     
     for combIdx in range(last):
-        print('Combination ', combIdx, ' : BDCQ = ',tableResultsSorted[combIdx,4],' | idx :', tableResultsSorted[combIdx,0], '/',tableResultsSorted[combIdx,1],
-              ' | Glasses : ' , GlassName[int(tableResultsSorted[combIdx,0])],
-                '/' , GlassName[int(tableResultsSorted[combIdx,1])])
-        idxA = int(tableResultsSorted[combIdx,0])
-        idxB = int(tableResultsSorted[combIdx,1])        
+        idxA_idx       = glassA_idx[combIdx]
+        idxB_idx       = glassB_idx[combIdx]
+        thetaA_idx     = thetaA_final[combIdx]/DEG2RAD #[°]
+        thetaB_idx     = thetaB_final[combIdx]/DEG2RAD #[°]
+        BDCQ_idx       = BDCQ_Final[combIdx]
+        VD_A_idx       = VD_A[combIdx]
+        VD_B_idx       = VD_B[combIdx]
+        nD_A_idx       = nD_A[combIdx]
+        nD_B_idx       = nD_B[combIdx]
+        CTE3070A_idx   = CTE3070_A[combIdx]
+        CTE3070B_idx   = CTE3070_B[combIdx]
+        GlassNameA_idx = tableResultsSorted[combIdx,11]
+        GlassNameB_idx = tableResultsSorted[combIdx,12]
+        
+        print('Combination ', combIdx, ' : BDCQ = ',BDCQ_idx,' | idx :', idxA_idx, '/',idxB_idx,
+              ' | Glasses : ' , GlassNameA_idx, '/' , GlassNameB_idx)
+      
         n_A = np.array([])
         n_B = np.array([])
         for Lambda_idx in range(np.size(lambda_um)):
             n_all_glasses,GlassName = RefractiveIndex(lambda_um[Lambda_idx])
-            n_A = np.append(n_A,n_all_glasses[idxA])
-            n_B = np.append(n_B,n_all_glasses[idxB])
-
-
-        VD_A = VD[int(tableResultsSorted[combIdx,0])]
-        VD_B = VD[int(tableResultsSorted[combIdx,1])]
-        nD_A = nD[int(tableResultsSorted[combIdx,0])]
-        nD_B = nD[int(tableResultsSorted[combIdx,1])]
-                 
-        fig = plt.figure()
+            n_A = np.append(n_A,n_all_glasses[idxA_idx])
+            n_B = np.append(n_B,n_all_glasses[idxB_idx])
+                
+        fig = plt.figure(figsize=(12, 8))
         ax1 = fig.add_subplot(121)
-        ax1.plot(lambda_um, n_A,'+',label='n$_A$ - '+GlassName[int(tableResultsSorted[combIdx,0])])
-        ax1.plot(lambda_um, n_B,'+',label='n$_B$ - '+GlassName[int(tableResultsSorted[combIdx,1])])
-        ax1.set_title('Combination '+str(combIdx)+' : BDCQ = '+str(tableResultsSorted[combIdx,4])+'\n'
-                  'Wedge angle : $\Theta_A$ = '+str(round(tableResultsSorted[combIdx,2]/DEG2RAD,2))+'[°] / $\Theta_B$ = '+str(round(tableResultsSorted[combIdx,3]/DEG2RAD,2))+' [°]\n'
-                  'Abbe number Vd [-] : A = '+str(VD[int(tableResultsSorted[combIdx,0])])+' / B = '+str(VD[int(tableResultsSorted[combIdx,1])])+'\n'
-                  'CTE-30/70 [10$^{-6}$ K$^{^-1}$]  : A = '+str(round(1e6*(CTE3070[int(tableResultsSorted[combIdx,0])]),2))+' / B = '+str(round(1e6*(CTE3070[int(tableResultsSorted[combIdx,1])]),2)))
+        ax1.plot(lambda_um, n_A,'+',label='n$_A$ - '+GlassNameA_idx)
+        ax1.plot(lambda_um, n_B,'+',label='n$_B$ - '+GlassNameB_idx)
+        ax1.set_title('Combination '+str(combIdx)+' : BDCQ = '+str(BDCQ_idx)+'\n'
+                  'Wedge angle : $\Theta_A$ = '+str(round(thetaA_idx,2))+'[°] / $\Theta_B$ = '+str(round(thetaB_idx,2))+' [°]\n'
+                  'Abbe number Vd [-] : A = '+str(VD_A_idx)+' / B = '+str(VD_B_idx)+'\n'
+                  'CTE-30/70 [10$^{-6}$ K$^{^-1}$]  : A = '+str(round(1e6*CTE3070A_idx,2))+' / B = '+str(round(1e6*CTE3070B_idx,2)))
         ax1.set_ylabel('n($\lambda$)')
         ax1.set_xlabel('$\lambda$ [um]')
         ax1.grid(True)
         ax1.legend()
         ax2 = fig.add_subplot(122)
-        ax2.plot(VD_A,nD_A,'+',label=GlassName[int(tableResultsSorted[combIdx,0])])
-        ax2.plot(VD_B,nD_B,'+',label=GlassName[int(tableResultsSorted[combIdx,1])])
+        ax2.plot(VD_A_idx,nD_A_idx,'+',label=GlassNameA_idx)
+        ax2.plot(VD_B_idx,nD_B_idx,'+',label=GlassNameB_idx)
         ax2.set_title('Abbe diagram')
         ax2.set_ylabel('n$_d$')
         ax2.set_xlabel('V$_D$')
