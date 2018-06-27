@@ -140,7 +140,7 @@ def glassChoiceTable(lambda_wave):
     Ratm = Refraction_atmosphere(lambda_wave, 70,standard=0)
     entryAngles    = Ratm-Ratm[1]
     entryAngle_min = entryAngles[0]
-    entryAngle_av  = entryAngles[1]
+    entryAngle_cen  = entryAngles[1]
     entryAngle_max = entryAngles[2]
     n0 = 1.
     thetaMin = -20*DEG2RAD
@@ -152,9 +152,9 @@ def glassChoiceTable(lambda_wave):
         thetaA=X[0]
         thetaB=X[1]
         exitAngle_min = exitAngle(entryAngle_min,n0,n_min[glassA_idx],n_min[glassB_idx],thetaA,thetaB)
-        exitAngle_av  = exitAngle(entryAngle_av ,n0,n_cen[glassA_idx],n_cen[glassB_idx],thetaA,thetaB)
+        exitAngle_cen  = exitAngle(entryAngle_cen ,n0,n_cen[glassA_idx],n_cen[glassB_idx],thetaA,thetaB)
         exitAngle_max = exitAngle(entryAngle_max,n0,n_max[glassA_idx],n_max[glassB_idx],thetaA,thetaB)
-        BDCQ = ((exitAngle_min-exitAngle_av)**2 + (exitAngle_max-exitAngle_av)**2 + (exitAngle_av-entryAngle_av)**2)**.5 #Beam Dispersion Correction Quality metric
+        BDCQ = ((exitAngle_min-exitAngle_cen)**2 + (exitAngle_max-exitAngle_cen)**2 + (exitAngle_cen-entryAngle_cen)**2)**.5 #Beam Dispersion Correction Quality metric
         return BDCQ
     
     NumberOfGlassesTotal=np.size(n_min)

@@ -83,19 +83,19 @@ elif plotSelection in ['plotSorted']:
 # tableResultsSorted arguments
 #     0      ,      1    ,        2     ,        3     ,       4     ,         5    ,        6   ,     7  ,     8  ,       9    ,       10   ,       11     ,      12 
 #glassA_idx  , glassB_idx , thetaA_final,  thetaB_final,   BDCQ_Final,        VD_A  ,       VD_B ,   nD_A ,   nD_B ,   CTE3070_A,   CTE3070_B,    GlassNameA,   GlassNameB
-    last = 10
+    last = 15
     
 #    #Plot the prism angles
 #    plt.figure(figsize=(12, 8))
-#    plt.plot(thetaA_final/DEG2RAD,'*',label='$\Theta_A$')
-#    plt.plot(thetaB_final/DEG2RAD,'*',label='$\Theta_B$')
+#    plt.plot(thetaA_final[0:last]/DEG2RAD,'*',label='$\Theta_A$')
+#    plt.plot(thetaB_final[0:last]/DEG2RAD,'*',label='$\Theta_B$')
 #    plt.ylabel('$\Theta$ [°]')
 #    plt.legend()
 #    plt.show()
 #    
 #    #Plot the BDCQ value
 #    plt.figure(figsize=(12, 8))
-#    plt.plot(BDCQ_Final,'*',label='BDCQ')
+#    plt.plot(BDCQ_Final[0:last],'*',label='BDCQ')
 #    plt.ylabel('BDCQ')
 #    plt.legend()
 #    plt.show()

@@ -232,14 +232,14 @@ The refractive index of moist air (atmosphere)~:
 \subsubsection{Atmosphere refraction equation}
 The refraction of the atmosphere is computed with the equation \cite{Stone1996}: 
 \begin{equation}
-	R(\lambda,z) = \kappa\left(n(\lambda)-1\right)\left(1-\beta\right)\tan(z) - \kappa\left(n(\lambda)-1\right)\left(\beta -\frac{\left(n(\lambda)-1\right)}{2}\right)\tan^3(z)\label{eq:Ratm}
+	R(\lambda,z) = \kappa\left(n(\lambda)-1\right)\left(1-\beta\right)\tan(z) - \kappa\left(n(\lambda)-1\right)\left(\beta -\frac{\left(n(\lambda)-1\right)}{2}\right)\tan^3(z)\,\,\,[\text{rad}]\label{eq:Ratm}
 \end{equation}
 with 
 \begin{itemize}
 	\item $\beta = 0.001254\left(\frac{T(K)}{273.15}\right)$ the effective height of the observatory above the surface of the earth \cite{Stone1996}
 	\item $\kappa = 1$ for a spherical Earth surface \cite{Stone1996} or instrumental correction no more useful \cite{Stone2002}
 \end{itemize} 
-This equation~\eqref{eq:Ratm} is valid only for zenith angle < 75\degree. We can even neglect the second term for zenith angles < 65\degree \cite{Tendulkar}. The limit of zenith angle of our computation is set to 70\degree so the entire equation is set.\\
+This equation~\eqref{eq:Ratm} is valid only for zenith angle $<$ 75\degree. We can even neglect the second term for zenith angles $<$ 65\degree \cite{Tendulkar}. The limit of zenith angle of our computation is set to 70\degree so the entire equation is set.\\
 
 The model applied for the wavelength range [500, 900]~nm shows~:
 \begin{figure}[H]
@@ -249,16 +249,17 @@ The model applied for the wavelength range [500, 900]~nm shows~:
 	\centering
 \end{figure}
 
+\subsubsection{Wavelength range}
+For our case, the wavelength range is set by the Nuvu camera~\cite{NuvuQE} bandwidth limits $\lambda_{min} = 500$~[nm] and $\lambda_{max} = 900$~[nm] and the maximum quantum efficiency that fixes the central wavelength to $\lambda_{cen} = 600$~[nm]. We use these 3 reference wavelengths to compute the ADC efficiency.
+
 \subsubsection{Glasses for the ADC}
-The choice of glass depends on the range of zenith angles, the wavelength interval, the maximum size of the blanks and the cost \cite{WynneWors1986}. Most of the glass couple in the Amici conception are flint/crown pairs. \\
+The choice of glass depends on the range of zenith angles, the wavelength interval and the cost \cite{WynneWors1986}. Most of the glass couple in the Amici conception are flint/crown pairs. \\
 The glass choice is made in a data base built from Schott and Ohara catalogues. The data are taken from~\cite{RefIndexInfo} where we can download glasses properties from many different suppliers. The data are sorted to extract Sellmeier coefficients~\cite{SchottSellmeier} in order to compute the refractive index of each glass depending on the wavelength with the equation~\eqref{eq:Sellmeier}.
 
 \begin{equation}
 	n^2(\lambda) = 1+ \frac{B_1\lambda^2}{\lambda^2-C_1}+\frac{B_2\lambda^2}{\lambda^2-C_2}+\frac{B_3\lambda^2}{\lambda^2-C_3}\label{eq:Sellmeier}
 \end{equation}
 with $B_i$ and $C_i$ Sellmeier coefficients for $\lambda$ in $\mu$m~\cite{SchottSellmeier}.\\
-
-The final glass data base with the refractive index reported is generated for three wavelengths : le smallest, the highest and the mean wavelength. These are for our case the Nuvu camera~\cite{NuvuQE} bandwidth limits $\lambda_{min} = 500$~[nm] and $\lambda_{max} = 900$~[nm] and the maximum quantum efficiency corresponding wavelength $\lambda_{mean} = 600$~[nm].
 
 
 
